@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="myCss.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="startMove2.js"></script>
+	<script type="text/javascript">
+		
+		window.onload=function()
+		{
+			//侧边栏
+			var oDiv8=document.getElementById('div8');
+			oDiv8.onmouseover=function(){
+				startMove3();
+			};
+			oDiv8.onmouseout=function(){
+				startMove4();
+			};
+
+			//放大镜效果
+			var oDiv7=document.getElementById('div7');
+			var oMark=document.getElementById('mark');
+			var oFloat=document.getElementById('float_layer');
+			var oBig=document.getElementById('big_pic');
+			var oSmall=document.getElementById('small_pic');
+			var bigImg=oBig.getElementsByTagName('img')[0];
+			oMark.onmouseover=function(){
+				oFloat.style.display='block';
+				oBig.style.display='block';
+			};
+			oMark.onmouseout=function(){
+				oFloat.style.display='none';
+				oBig.style.display='none';
+			};
+			oMark.onmousemove=function(ev){
+				var oEvent=ev||event;
+				var l=oEvent.clientX-oDiv7.offsetLeft-oSmall.offsetLeft-oFloat.offsetWidth/2;
+				var t=oEvent.clientY-oDiv7.offsetTop-oSmall.offsetTop-oFloat.offsetHeight/2;
+				if(l<0){
+					l=0;
+				}else if(l>oMark.offsetWidth-oFloat.offsetWidth){
+					l=oMark.offsetWidth-oFloat.offsetWidth;
+				};
+				if(t<0){
+					t=0;
+				}else if(t>oMark.offsetHeight-oFloat.offsetHeight){
+					t=oMark.offsetHeight-oFloat.offsetHeight;
+				};
+				oFloat.style.left=l+'px';
+				oFloat.style.top=t+'px';
+				var percentX=l/(oMark.offsetWidth-oFloat.offsetWidth);
+				var percentY=t/(oMark.offsetHeight-oFloat.offsetHeight);
+				bigImg.style.left=-percentX*(bigImg.offsetWidth-oBig.offsetWidth)+'px';
+				bigImg.style.top=-percentY*(bigImg.offsetHeight-oBig.offsetHeight)+'px';
+			};
+			//无缝滚动
+				var oDiv6=document.getElementById('div6');
+				var oUl3=oDiv6.getElementsByTagName('ul')[0];
+				var aLi3=oUl3.getElementsByTagName('li');
+				var timer=null;
+				var iSpeed=3;
+				oUl3.innerHTML+=oUl3.innerHTML;
+				oUl3.style.width=aLi3.length*aLi3[0].offsetWidth+'px';
+				function fnMove(){
+					if(oUl3.offsetLeft<-oUl3.offsetWidth/2){
+						oUl3.style.left=0;
+					}else if(oUl3.offsetLeft>0){
+						oUl3.style.left=-oUl3.offsetWidth/2+'px';
+					}
+					oUl3.style.left=oUl3.offsetLeft+iSpeed+'px';
+				}; 
+				timer=setInterval(fnMove,30);
+				oDiv6.onmouseover=function(){
+					clearInterval(timer);
+				};
+				oDiv6.onmouseout=function(){
+					timer=setInterval(fnMove,30);
+					iSpeed=-iSpeed;
+				}
+
+			//选项卡
+				var oTab=new TabSwitch('tab');
+
+			//自定义滚动条
+				var oDiv3=document.getElementById('div3');
+				var oDiv4=document.getElementById('div4');
+				var oDiv5=document.getElementById('div5');
+				var oParent=document.getElementById('parent');
+
+				function onMouseWheel(ev){
+					var oEvent=ev||event;
+					var bDown=true;
+					bDown=oEvent.wheelDelta?oEvent.wheelDelta<0:oEvent.detail>0;
+					if(bDown){
+						setLeft(oDiv3.offsetLeft+10);
+					}else{
+						setLeft(oDiv3.offsetLeft-10);
+					};
+					//阻止默认滚动条滚动
+					if(oEvent.preventDefault){
+						oEvent.preventDefault();
+					};
+					return false;
+				};
+				myAddEvent(oParent,'mousewheel',onMouseWheel);
+				myAddEvent(oParent,'DOMMouseScroll',onMouseWheel);
+				myAddEvent(oDiv4,'mousewheel',onMouseWheel);
+				myAddEvent(oDiv4,'DOMMouseScroll',onMouseWheel);
+				oDiv3.onmousedown=function(ev){
+					var oEvent=ev||event;
+					var disX=oEvent.clientX-oDiv3.offsetLeft;
+					document.onmousemove=function(ev){
+						var oEvent=ev||event;
+						var l=oEvent.clientX-disX;
+						setLeft(l);
+					};
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+					};
+				};
+				function setLeft(l){
+					if(l<0){
+						l=0;
+					}else if(l>oParent.offsetWidth-oDiv3.offsetWidth){
+						l=oParent.offsetWidth-oDiv3.offsetWidth;
+					};
+					oDiv3.style.left=l+'px';
+					//滚动条拖动的比例
+					var scale=l/(oParent.offsetWidth-oDiv3.offsetWidth);
+					oDiv5.style.top=-(oDiv5.offsetHeight-oDiv4.offsetHeight)*scale+'px';
+				};
+
+
+
+			//滑动菜单
+				var oUl=document.getElementById('ul1');
+				var aLi=oUl.getElementsByTagName('li');
+				var oBg=aLi[aLi.length-1];
+				var oldBgColor='';
+				for(var i=0;i<aLi.length-1;i++){
+					aLi[i].onmouseover=function(){
+						startMove2(oBg,this.offsetLeft);
+					};
+					aLi[i].onmousedown=function(){
+						oldBgColor=this.style.background;
+						this.style.background='#436EEE';
+					};
+					aLi[i].onmouseout=function(){
+						this.style.background=oldBgColor;
+					};
+				};
+
+			//360度全景图片
+				var oDiv=document.getElementById('left');
+				var x=0;
+				var oImg=document.getElementById('img1');
+				var aImg=oDiv.getElementsByTagName('img');
+				var oLastImg=oImg;
+				//图片预加载
+				for(var i=1;i<77;i++){
+					var oNewImg=document.createElement('img');
+					oNewImg.src='tupian ('+i+').jpg';
+					oNewImg.style.display='none';
+					oDiv.appendChild(oNewImg);
+				};
+				oDiv.onmousedown=function(ev){
+					var oEvent=ev||event;
+					var disX=oEvent.clientX-x;
+					document.onmousemove=function(ev){
+						var oEvent=ev||event;
+						x=oEvent.clientX-disX;
+						var l=parseInt(-x/10);
+						//x取负数是往右拖则往右转，防止相反,除以10是控制转动速度
+						if(l>0){
+							l=l%77;
+						}else{
+							l=l+-Math.floor(l/77)*77;
+						};
+						if(oLastImg!=oImg[l]){
+							oLastImg.style.display='none';
+							aImg[l].style.display='block';
+							oLastImg=aImg[l];
+						};
+						return false;
+					};
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+					};
+					return false;
+				};   
+
+			//照片墙
+			var oUl2=document.getElementById('ul2');
+			var aLi2=oUl2.getElementsByTagName('li');
+			var aPos=[];
+			var iMinZindex=2;
+			var i = 0;
+			//布局转换
+			for(i=0;i<aLi2.length;i++){
+				aPos[i]={left:aLi2[i].offsetLeft,top:aLi2[i].offsetTop};
+			};
+			for(i=0;i<aLi2.length;i++){
+				aLi2[i].style.left=aPos[i].left+'px';
+				aLi2[i].style.top=aPos[i].top+'px';
+				aLi2[i].style.position='absolute';
+				aLi2[i].style.margin='0';
+				aLi2[i].index=i;
+			};
+
+			//拖拽
+			for(i=0;i<aLi2.length;i++){
+				setDrag(aLi2[i]);
+			}
+			function setDrag(obj){
+				obj.onmousedown=function(ev){
+					var oEvent=ev||event;
+					obj.style.zIndex=iMinZindex++;
+					var disX=oEvent.clientX-obj.offsetLeft;
+					var disY=oEvent.clientY-obj.offsetTop;
+					document.onmousemove=function(ev){
+						var oEvent=ev||event;
+						obj.style.left=oEvent.clientX-disX+'px';
+						obj.style.top=oEvent.clientY-disY+'px';
+
+						for(i=0;i<aLi2.length;i++){
+							aLi2[i].className='';
+						};
+						var oNear=findNearest(obj);
+						if(oNear){
+							oNear.className='active';
+						}
+					};
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+						var oNear=findNearest(obj);
+						if(oNear){
+							//互换位置
+							oNear.className='';
+							oNear.style.zIndex=iMinZindex++;
+							obj.style.zIndex=iMinZindex++;
+							startMove(oNear,aPos[obj.index]);
+							startMove(obj,aPos[oNear.index]);
+							//交换两个的index值
+							var tmp=0;
+							tmp=obj.index;
+							obj.index=oNear.index;
+							oNear.index=tmp;
+						}else{
+							startMove(obj,aPos[obj.index]);
+						}  //aPos[obj.index]=={left:aPos[obj.index].left,top:aPos[obj.index].top}
+					};
+					clearInterval(obj.timer);
+					return false;
+				};
+			};
+
+			//碰撞检测
+			function cdTest(obj1,obj2){
+				var l1=obj1.offsetLeft;
+				var r1=obj1.offsetLeft+obj1.offsetWidth;
+				var t1=obj1.offsetTop;
+				var b1=obj1.offsetTop+obj1.offsetHeight;
+
+				var l2=obj2.offsetLeft;
+				var r2=obj2.offsetLeft+obj2.offsetWidth;
+				var t2=obj2.offsetTop;
+				var b2=obj2.offsetTop+obj2.offsetHeight;
+				if(r1<l2||l1>r2||b1<t2||t1>b2){
+					return false;
+				}else{
+					return true;
+				};
+			};
+
+			//求两者间的距离
+			function getDis(obj1,obj2){
+				var a=obj1.offsetLeft-obj2.offsetLeft;
+				var b=obj1.offsetTop-obj2.offsetTop;
+				return Math.sqrt(a*a+b*b);
+			};
+
+			//找到碰上的最小距离
+			function findNearest(obj){
+				var iMin=999999999;
+				var iMinIndex=-1;
+
+				for(i=0;i<aLi2.length;i++){
+
+					if(obj==aLi2[i]) continue;
+
+					if(cdTest(obj,aLi2[i])){
+						var dis=getDis(obj,aLi2[i]);
+						if(iMin>dis){
+							iMin=dis;
+							iMinIndex=i;
+						};
+					};
+				};
+				if(iMinIndex==-1){
+					return null;
+				}else
+				{
+					return aLi2[iMinIndex];
+				};
+		   	};														
+		};
+
+		
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<ul id="ul1">
+			<li>首页</li>
+			<li>关于我</li>
+			<li>个人日记</li>
+			<li>留言板</li>
+			<li>教程</li>
+			<li>更多</li>
+			<li class="bg"></li>
+		</ul>
+		<div class="myDiv">
+			<img src="10.png" />
+			<a href="https://github.com/Nijiangg"><img src="11.png" /></a>
+		</div>
+	</div>
+	<div id="container">
+		
+		<div id="center">
+			<div id="wrap"> 
+				<div id="scrollBar">
+					<div id="parent">
+						<div id="div3"></div>
+					</div>
+					<div id="div4">
+						<div id="div5">自我介绍: 你好，我叫江栋。2015年本科毕业，非计算机相关专业。2016年2月中旬开始自学前端，主要通过**课网、W3C、网络视频及阅读相关书籍等方式自学，目前熟悉HTML、CSS、JavaScript、JQuery并且了解HTML5标签语义及相关属性，正在学习Bootstrap。现在想找一份实习，因为闭门造车的效率实在不高，而且基础知识薄弱，所以走了些弯路，很多常识性的东西都要摸索很久，比如如何正确使用Git。我希望能够在工作中提高自己，并且在工作中确定自己的学习方向，毕竟现在前端冒出来的东西太多，作为一个初学者实在无力筛选。如果能够有一位前辈带着的话我相信可以做的更好，效率更高。我不会占用前辈太多时间，只需要给我指个正确的方向，在我遇到BUG时能给点指点，剩下的就交给我好了。所以如果您能够给我提供这么一个实习岗位的话，麻烦联系我好吗？我可以遵从正式员工的作息时间，比如996什么的，实习期过后如果您觉得我还不错顺手签下来那就再好不过了。而且如果您自觉可以给我带来一个很大的提高或者一个不错的平台，那么我很乐意白干。这应该算是一次有诚意的求职吧？我的联系方式在左下角，感谢您的阅读。</div>
+					</div>
+				</div>
+				<div id="tab">
+					<input class='active' type="button" value="JavaScript" />
+					<input type="button" value="JQuery" />
+					<input type="button" value="HTML5">
+					<input type="button" value="CSS">
+					<input type="button" value="Bootstrap">
+					<div style="display: block;">JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。</div>
+					<div>JQuery是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需要定义id即可。</div>
+					<div>万维网的核心语言、标准通用标记语言下的一个应用超文本标记语言（HTML）的第五次重大修改（这是一项推荐标准、外语原文：W3C Recommendation、见本处参考资料原文内容：[1]  ）。
+					2014年10月29日，万维网联盟宣布，经过接近8年的艰苦努力，该标准规范终于制定完成。</div>
+					<div>CSS即层叠样式表（Cascading StyleSheet）。 在网页制作时采用层叠样式表技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。 只要对相应的代码做一些简单的修改，就可以改变同一页面的不同部分，或者页数不同的网页的外观和格式。CSS3是CSS技术的升级版本，CSS3语言开发是朝着模块化发展的。以前的规范作为一个模块实在是太庞大而且比较复杂，所以，把它分解为一些小的模块，更多新的模块也被加入进来。这些模块包括： 盒子模型、列表模块、超链接方式 、语言模块 、背景和边框 、文字特效 、多栏布局等。</div>
+					<div>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。[1]  它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。[2]  国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。</div>
+				</div>
+			</div>
+		</div>
+	    <div id="left">
+	    	360度全景图片<img src="tupian (0).jpg" id="img1" />
+	    </div>
+	    <div id="right">
+	    	<ul id="ul2">
+				<li><img src="13.jpg" width="110px;" height="110;" /></li>
+				<li><img src="14.jpg" width="110px;" height="110;" /></li>
+				<li><img src="15.jpg" width="110px;" height="110;" /></li>
+				<li><img src="16.jpg" width="110px;" height="110;" /></li>
+				<li><img src="17.jpg" width="110px;" height="110;" /></li>
+				<li><img src="18.jpg" width="110px;" height="110;" /></li>
+				<li><img src="13.jpg" width="110px;" height="110;" /></li>
+				<li><img src="14.jpg" width="110px;" height="110;" /></li>
+				<li><img src="15.jpg" width="110px;" height="110;" /></li>
+				<li><img src="16.jpg" width="110px;" height="110;" /></li>
+				<li><img src="17.jpg" width="110px;" height="110;" /></li>
+				<li><img src="18.jpg" width="110px;" height="110;" /></li>
+				<li><img src="13.jpg" width="110px;" height="110;" /></li>
+				<li><img src="14.jpg" width="110px;" height="110;" /></li>
+				<li><img src="15.jpg" width="110px;" height="110;" /></li>
+				<li><img src="16.jpg" width="110px;" height="110;" /></li>
+			</ul>
+	    </div>
+	</div>
+	<div id="footer">
+		<div id="div8">
+		<p>Email：<br /><strong>jiangdong_s@163.com</strong></p><br />
+		<p>QQ：<br /><strong>347192550</strong></p>
+			<span>联系我</span>
+		</div>
+		<div id="div6">
+			<ul>
+				<li class="li1"><img src="fengjing(1).jpg" /></li>
+				<li class="li1"><img src="fengjing(2).jpg" /></li>
+				<li class="li1"><img src="fengjing(3).jpg" /></li>
+				<li class="li1"><img src="fengjing(4).jpg" /></li>
+			</ul>
+			无缝滚动
+		</div>
+		<div id="div7">
+			<div id="small_pic">
+				<span id="mark"></span>
+				<span id="float_layer"></span>
+				<img src="small.jpg" height="200px" width="200px" />
+			</div>
+			<div id="big_pic">
+				<img src="big.jpg" height="400px" width="400px" />
+			</div>
+			放大镜效果
+		</div>
+	</div>
+</body>
+</html>
