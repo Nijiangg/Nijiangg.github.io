@@ -7,7 +7,7 @@ body,h1,h2,h3,ul,p,figure {
 body {
 	background-color: #fff;
 }
-ul {
+ul,ol  {
 	list-style: outside none none;
 }
 a {
@@ -58,7 +58,9 @@ a {
 	background-color: #000;
 }
 #footer {
-
+	width: 100%;
+	min-width: 1263px;
+	border: 1px solid red;
 	background-color: #222;
 	clear: both;
 	position: relative;

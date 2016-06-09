@@ -26,7 +26,7 @@
 }
 #container {
 	width: 1263px;
-	margin: 300px auto;
+	margin: 30px auto;
 }
 #container .sidebar {
 	width: 320px;
@@ -78,13 +78,19 @@
 	display: inline-block;
 	color: #666;
 	padding: 4px;
+	float: left;
+}
+#container .treasure{
+	border: 1px solid #eee;
+	margin: 550px 0 10px;
+	background: #fff;
 }
 #container .box {
 	padding: 10px 0;
 }
 #container .box a {
 	display: inline-block;
-	margin: 2px 0;
+	margin: 10px 0;
 	width: 150px;
 	height: 40px;
 	line-height: 40px;
@@ -92,6 +98,7 @@
 	background-color: #eee;
 	text-align: left;
 	text-indent: 35px;
+	float: left;
 }
 #container .box a.trea1 {
 	background: #eee url(../img/trea1.png) no-repeat 10px center;
@@ -433,6 +440,15 @@
 	text-align: center;
 	padding: 5px 0;
 	font-size: 20px;
+	color: #666;
+}
+#container .about h2,#container .scenery h2,#container .ticket h2{
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: normal;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
 	color: #666;
 }
 #container .about p {
