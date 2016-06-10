@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>旅游资讯</title>
-	<link rel="stylesheet" type="text/css" href="css/basic.css">
-	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>响应式布局</title>
+	<link rel="stylesheet" type="text/css" href="css/style4.css">
 </head>
 <body>
 	<header id="header">
@@ -13,23 +13,31 @@
 			<nav class="link">
 				<h2 class="none">网站导航</h2>
 				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li><a href="zixun.html">旅游资讯</a></li>
-					<li class="active"><a href="###">机票订购</a></li>
-					<li><a href="scenery.html">风景欣赏</a></li>
-					<li><a href="about.html">公司简介</a></li>
+					<li>
+						<a href="index3.html">首页</a></li>
+					<li>
+						<a href="zixun3.html"><spanclass="xs-hidden">旅游</span>资讯</a>
+					</li>
+					<li class="active">
+						<a href="ticket3.html">机票<span class="xs-hidden">订购</span></a>
+					</li>
+					<li class="xs-hidden">
+						<a href="scenery3.html">风景欣赏</a>
+					</li>
+					<li>
+						<a href="about3.html">关于<span class="xs-hidden">公司</span></a>
+					</li>
 				</ul>
 			</nav>
 		</div>
-		<div id="headline">
-			<div class="center">
-				<hgroup>
-					<h2>旅游资讯</h2>
-					<h3>介绍各种最新旅游信息、资讯要闻、景点攻略等</h3>
-				</hgroup>
-			</div>
-		</div>
 	</header>
+	<div id="headline">
+			<img src="img/headline.jpg" alt="">
+			<hgroup>
+				<h2>票务订购</h2>
+				<h3>各种飞机票、火车票、汽车票和轮渡票的订购服务</h3>
+			</hgroup>
+	</div>
 	<div id="container">
 		<aside class="sidebar">
 			<div class="sidebox recommend">
@@ -110,7 +118,7 @@
 			</div>
 		</aside>
 		<div class="list ticket">
-			<form action="###">
+				<form action="###">
 			<h2>机票预定</h2>
 			<div class="type">
 				<p>航程类型<mark>单程</mark> 往返</p>
@@ -254,40 +262,49 @@
 					</tfoot>
 				</table>
 			</div>
-		</div>
+	    </div>
 	</div>
 	<footer id="footer">
-	<div class="top">
-		<div class="block left">
-			<h2>合作伙伴</h2><hr>
-			<ul>
-				<li>途牛旅游网</li>
-				<li>驴妈妈旅游网</li>
-				<li>携程旅游</li>
-				<li>中国青年旅行社</li>
-			</ul>
+		<div class="top sm-hidden">
+			<div class="block left">
+				<h2>合作伙伴</h2>
+				<hr>
+				<ul>
+					<li>途牛旅游网</li>
+					<li>驴妈妈旅游网</li>
+					<li>携程旅游</li>
+					<li>中国青年旅行社</li>
+				</ul>
+			</div>
+			<div class="block center">
+				<h2>旅游FAQ</h2>
+				<hr>
+				<ul>
+					<li>旅游合同签订方式？</li>
+					<li>儿童价是基于什么制定的？</li>
+					<li>旅游的线路品质怎么界定的？</li>
+					<li>单房差是什么？</li>
+					<li>旅游保险有那些种类？</li>
+				</ul>
+			</div>
+				<div class="block right">
+				<h2>联系方式</h2>
+				<hr>
+				<ul>
+					<li>微博：weibo.com/ycku</li>
+					<li>邮件：ycku@ycku.com</li>
+					<li>地址：江苏盐城无名路123 号</li>
+				</ul>
+			</div>
 		</div>
-		<div class="block center">
-			<h2>旅游FAQ</h2><hr>
-			<ul>
-				<li>旅游合同签订方式？</li>
-				<li>儿童价是基于什么制定的？</li>
-				<li>旅游的线路品质怎么界定的？</li>
-				<li>单房差是什么？</li>
-				<li>旅游保险有那些种类？</li>
-			</ul>
+		<div class="clearfix"></div>
+		<div class="version sm-visible">
+			客户端| 触屏版| 电脑版
 		</div>
-		<div class="block right">
-			<h2>联系方式</h2><hr>
-			<ul>
-				<li>微博：weibo.com/ycku</li>
-				<li>邮件：ycku@ycku.com</li>
-				<li>地址：江苏盐城无名路123 号</li>
-			</ul>
+		<div class="bottom">
+			Copyright © YCKU 瓢城旅行社| 苏ICP 备120110119 号
+			<span class="sm-hidden">| 旅行社经营许可证：L-YC-BK12345</span>
 		</div>
-	</div>
-	<div class="bottom">Copyright © YCKU 瓢城旅行社| 苏ICP 备120110119 号| 旅行社经营许可证：L-YC-BK12345
-	</div>
-</footer>
+	</footer>
 </body>
 </html>

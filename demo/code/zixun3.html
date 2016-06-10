@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>旅游资讯</title>
-	<link rel="stylesheet" type="text/css" href="css/basic.css">
-	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>响应式布局</title>
+	<link rel="stylesheet" type="text/css" href="css/style4.css">
 </head>
 <body>
 	<header id="header">
@@ -13,23 +13,31 @@
 			<nav class="link">
 				<h2 class="none">网站导航</h2>
 				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li class="active"><a href="zixun.html">旅游资讯</a></li>
-					<li><a href="ticket.html">机票订购</a></li>
-					<li><a href="scenery.html">风景欣赏</a></li>
-					<li><a href="about.html">公司简介</a></li>
+					<li>
+						<a href="index3.html">首页</a></li>
+					<li>
+						<a href="zixun3.html"><spanclass="xs-hidden">旅游</span>资讯</a>
+					</li>
+					<li>
+						<a href="ticket3.html">机票<span class="xs-hidden">订购</span></a>
+					</li>
+					<li class="xs-hidden">
+						<a href="scenery3.html">风景欣赏</a>
+					</li>
+					<li class="active">
+						<a href="about3.html">关于<span class="xs-hidden">公司</span></a>
+					</li>
 				</ul>
 			</nav>
 		</div>
-		<div id="headline">
-			<div class="center">
-				<hgroup>
-					<h2>旅游资讯</h2>
-					<h3>介绍各种最新旅游信息、资讯要闻、景点攻略等</h3>
-				</hgroup>
-			</div>
-		</div>
 	</header>
+	<div id="headline">
+			<img src="img/headline.jpg" alt="">
+			<hgroup>
+				<h2>旅游资讯</h2>
+				<h3>介绍各种最新旅游信息、资讯要闻、景点攻略等</h3>
+			</hgroup>
+	</div>
 	<div id="container">
 		<aside class="sidebar">
 			<div class="sidebox recommend">
@@ -109,18 +117,8 @@
 				</div>
 			</div>
 		</aside>
-		<div class="list">
-			<div class="infor">
-				<ul class="left">
-					<li><a href="###">限时特价</a></li>
-					<li><a href="###">热门推荐</a></li>
-				</ul>
-				<ul class="right">
-					<li><a href="###" class="selected">推荐</a></li>
-					<li><a href="###">折扣</a></li>
-					<li><a href="###">价格</a></li>
-				</ul>
-			</div>
+		<div class="list information">
+			<h2>旅游资讯</h2>
 		<figure class="tour">
 			<img src="img/tour1.jpg" alt="曼谷-芭提雅6 日游">
 			<figcaption>
@@ -132,18 +130,18 @@
 							元成人券...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>2864</strong><s>¥3980</s>
 						</div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">国内长线</div>
-					<div class="disc"><span>4.7 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>4.7 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -158,17 +156,17 @@
 						<h3>双鱼岛Olhuveli4 晚，上海出发，机+酒包含:早晚餐+快艇...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>8039</strong><s>¥9980</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">出境长线</div>
-					<div class="disc"><span>7.7 折</span></div>
-					<footer>
+					<div class="disc xs-hidden"><span>7.7 折</span></div>
+					<footer class="md-hidden">
 						本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
@@ -184,17 +182,17 @@
 							<h3>含盐城接送，全程挂牌四星酒店，一价全含，零自费“自费项目”免费送...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>2709</strong><s>¥3280</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">自助旅游</div>
-					<div class="disc"><span>6.5 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>6.5 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -210,17 +208,17 @@
 							</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>9499</strong><s>¥9999</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">自助旅游</div>
-					<div class="disc"><span>8.8 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>8.8 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -235,17 +233,17 @@
 							<h3>4 至5 星，金色列车，少女峰，部分THE MALL...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>9199</strong><s>¥9999</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">国内短线</div>
-					<div class="disc"><span>9.2 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>9.2 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -260,17 +258,17 @@
 							<h3>蓝梦出海，独栋别墅，悦榕庄下午茶，纯玩...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>6488</strong><s>¥8460</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">国内短线</div>
-					<div class="disc"><span>7.6 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>7.6 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -285,17 +283,17 @@
 							<h3>一游两国，4 晚塞舌尔，2 晚迪拜，香港EK 往返...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>9669</strong><s>¥9999</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">游轮观光</div>
-					<div class="disc"><span>9.6 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>9.6 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -311,17 +309,17 @@
 							剔味蕾...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>9999</strong><s>9999</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">出境长线</div>
-					<div class="disc"><span>10 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>10 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
@@ -336,56 +334,65 @@
 							<h3>盐城直飞，不走回头路，境外无自费，超值之旅...</h3>
 						</hgroup>
 					</header>
-					<ol>
+					<ol class="md-hidden">
 						<li><mark>交通</mark> 春秋航空,杭州出发,无需转机</li>
 						<li><mark>团期</mark> 11/01、11/03、11/08...</li>
 					</ol>
 					<div class="buy">
 						<div class="price">¥<strong>5284</strong><s>8437</s></div>
-						<div class="reserve"><a href="###">立即抢购</a></div>
+						<div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 					</div>
 					<div class="type">国内短线</div>
-					<div class="disc"><span>6.8 折</span></div>
-					<footer>本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
+					<div class="disc xs-hidden"><span>6.8 折</span></div>
+					<footer class="md-hidden">本团游由瓢城旅行社赞助提供，截止于<time>2015-10-10</time>
 					</footer>
 				</article>
 			</figcaption>
 		</figure>
 		<div class="more">加载更多...</div>
-		</div>
+	    </div>
 	</div>
 	<footer id="footer">
-	<div class="top">
-		<div class="block left">
-			<h2>合作伙伴</h2><hr>
-			<ul>
-				<li>途牛旅游网</li>
-				<li>驴妈妈旅游网</li>
-				<li>携程旅游</li>
-				<li>中国青年旅行社</li>
-			</ul>
+		<div class="top sm-hidden">
+			<div class="block left">
+				<h2>合作伙伴</h2>
+				<hr>
+				<ul>
+					<li>途牛旅游网</li>
+					<li>驴妈妈旅游网</li>
+					<li>携程旅游</li>
+					<li>中国青年旅行社</li>
+				</ul>
+			</div>
+			<div class="block center">
+				<h2>旅游FAQ</h2>
+				<hr>
+				<ul>
+					<li>旅游合同签订方式？</li>
+					<li>儿童价是基于什么制定的？</li>
+					<li>旅游的线路品质怎么界定的？</li>
+					<li>单房差是什么？</li>
+					<li>旅游保险有那些种类？</li>
+				</ul>
+			</div>
+				<div class="block right">
+				<h2>联系方式</h2>
+				<hr>
+				<ul>
+					<li>微博：weibo.com/ycku</li>
+					<li>邮件：ycku@ycku.com</li>
+					<li>地址：江苏盐城无名路123 号</li>
+				</ul>
+			</div>
 		</div>
-		<div class="block center">
-			<h2>旅游FAQ</h2><hr>
-			<ul>
-				<li>旅游合同签订方式？</li>
-				<li>儿童价是基于什么制定的？</li>
-				<li>旅游的线路品质怎么界定的？</li>
-				<li>单房差是什么？</li>
-				<li>旅游保险有那些种类？</li>
-			</ul>
+		<div class="clearfix"></div>
+		<div class="version sm-visible">
+			客户端| 触屏版| 电脑版
 		</div>
-		<div class="block right">
-			<h2>联系方式</h2><hr>
-			<ul>
-				<li>微博：weibo.com/ycku</li>
-				<li>邮件：ycku@ycku.com</li>
-				<li>地址：江苏盐城无名路123 号</li>
-			</ul>
+		<div class="bottom">
+			Copyright © YCKU 瓢城旅行社| 苏ICP 备120110119 号
+			<span class="sm-hidden">| 旅行社经营许可证：L-YC-BK12345</span>
 		</div>
-	</div>
-	<div class="bottom">Copyright © YCKU 瓢城旅行社| 苏ICP 备120110119 号| 旅行社经营许可证：L-YC-BK12345
-	</div>
-</footer>
+	</footer>
 </body>
 </html>
