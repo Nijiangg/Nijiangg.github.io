@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>装B神器</title>
+    <link href="css.css" rel="stylesheet">
+    <link href="css1.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <header class="ui-header ui-header-positive ui-border-b">
+        <h1>万能券生成器</h1>
+    </header>
+    <div class="ui-container container body-content" style="padding-bottom: 55px;">
+        <section style="padding-bottom: 55px;">
+            <div style="padding: 10px; width: calc(100% - 20px)">
+                <img id="mainImage" class="main-image" src="http://q.weixinmongo.com/zb105wangnengquan_icon.jpg">
+            </div>
+            <div class="ui-form ui-border-t">
+                <form action="result" enctype="multipart/form-data" method="POST">
+                    
+
+
+
+<div class="ui-form-item ui-border-b">
+    <label>姓名</label>
+    <input type="text" name="name" maxlength="6" required="required" placeholder="输入姓名">
+</div>
+ 
+<div class="ui-form-item ui-border-b">
+    <label>券类型</label>
+    <div class="ui-select">
+        <select name="quanType">
+            <option value="11" selected="selected">约会券</option>
+            <option value="1">旅行券</option>
+            <option value="2">聊天券</option>
+            <option value="3">做饭券</option>
+            <option value="4">情话券</option>
+            <option value="5">美食券</option>
+            <option value="6">捶背券</option>
+            <option value="7">拥抱券</option>
+            <option value="8">撕逼券</option>
+            <option value="9">装逼券</option>
+            <option value="10">索吻券</option>
+        </select>
+    </div>
+</div>
+ 
+                    <div class="ui-btn-wrap">
+                        <button class="ui-btn-lg ui-btn-primary" onclick="return confirmSubmit()">确定</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+        <script>
+            function confirmSubmit() {
+                show();
+                return false;
+            }
+        </script>
+    
+            <footer class="footer-more">
+                <ul class="ui-tiled">
+                                                <li>
+                                <a href="javascript:void(0)" onclick="show()">更多装B功能</a>
+                            </li>
+
+                </ul>
+            </footer>
+            <div id="follow" class="follow">
+            <span class="close" onclick="hide()">×</span>
+            <p>长按下方图片识别二维码</p>
+            <p>关注后即可使用</p>
+            <img src="http://open.weixin.qq.com/qr/code/?username=gh_a3cf60dd4843">
+        </div>
+        <script type="text/javascript">
+            function show() {
+                document.getElementById("follow").style.display = "block";
+            }
+            function hide() {
+                document.getElementById("follow").style.display = "none";
+            }
+        </script>
+    
+<script src="js1.js"></script>
+<script type="text/javascript">
+    wx.config({
+        debug: false,
+        appId: 'wxcad1973a1525c80e',
+        timestamp: '1465742801',
+        nonceStr: 'Wm3WZYTPz0wzccnW',
+        signature: '2c2e7036478a721e797b29e001364f8e2491104c',
+        jsApiList: [
+            'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone', 'getNetworkType'
+        ]
+    });
+    wx.ready(function () {
+        var shareTitleInMoments = '【万能券生成器】有这券就安心了';
+        var title = '万能券生成器';
+        var desc = '有这券就安心了';
+
+        var link = 'http://zb.zhuangbizushou.com/zb105wangnengquan/';
+
+        var imgUrl = 'http://q.weixinmongo.com/zb105wangnengquan_icon.jpg';
+        // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline({
+            title: shareTitleInMoments, // 分享标题
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage({
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        // 获取“分享到QQ”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQQ({
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        // 获取“分享到腾讯微博”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareWeibo({
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        // 获取“分享到QQ空间”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareQZone({
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+</script>
+
+        <script src="js.js" language="JavaScript"></script>
+</body>
+</html>
