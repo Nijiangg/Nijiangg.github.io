@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+}
+a{text-decoration: none;color: black;}
+.header{
+	width: 100%;
+	background: #FFA54F;
+}
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+	height: 400px;
+}
+.container1{
+	width: 100%;
+	background-color: #F5F5F5;
+}
+.title{
+	width: 1000px;
+	margin: 0 auto;
+	height: 30px;
+}
+.leftArea{
+	display: inline-block;
+	float: left;
+	font-weight: bold;
+	line-height: 30px;
+}
+.rightArea{
+	display: inline-block;
+	float: right;
+	line-height: 30px;
+}
+.logo{
+	width: 1000px;
+	margin: 0 auto;
+	height: 88px;
+}
+.container2{
+	width: 100%;
+	background: #FF8247;
+}
+.logo img{
+	float: left;
+}
+.input{
+	width: 400px;
+	height: 40px;
+	float: left;
+	margin-left: 150px;
+	margin-top: 30px;
+
+}
+.text{
+	width: 300px;
+	height: 35px;
+	border-radius: 10px;
+	border-style: none;
+	font-size: 16px;
+}
+.btn{
+	width: 50px;
+	height: 30px;
+	background: #FFD700;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+.shopCar{
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	background: #FFD700;
+	float: right;
+	margin-top: 35px;
+	margin-right: 100px;
+	text-align: center;
+	font-size: 16px;
+
+}
+.shopCar span{
+	border-left: 1px solid black;
+}
+.daohang{
+	width: 1000px;
+	margin: 0 auto;
+	height: 30px;
+}
+.fenlei{
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	color: #FFFFFF;
+	background: #FF8C69;
+	text-align: center;
+	float: left;
+}
+.daohang li{
+	list-style: none;
+	float: left;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+.daohang a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.daohang a:hover{
+	color: red;
+}
+.footer{width: 100%;height: 230px;background: #EECBAD;margin-top: 40px;}
+.footer_wrap{width: 1000px;margin: 0 auto;text-align: center;padding-top: 55px;}
+.footer_wrap p{height: 30px;line-height: 30px;}
+.footer_wrap img{margin-right: 20px;}

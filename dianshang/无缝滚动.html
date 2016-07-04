@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<script type="text/javascript">
+		window.onload=function () {
+			var con1=document.getElementById('con1');
+			var con2=document.getElementById('con2');
+			var area=document.getElementById('box');
+			con2.innerHTML=con1.innerHTML;
+			function scrollUp(){
+				if(area.scrollUp>=con1.offsetHeight){
+					area.scrollUp=0;
+				}else{
+					area.scrollUp++;
+				};
+			};
+			var time=50;
+			var myScroll=setInterval("scrollUp()";time);
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<ul id="con1">
+			<li>fdfsdfsf</li>
+			<li>fdsfsdf</li>
+			<li>fsfsg</li>
+			<li>gdgdg</li>
+			<li>bvbc</li>
+			<li>nfg</li>
+			<li>gsdg</li>
+			<li>bbfg</li>
+			<li>egrgr</li>
+		</ul>
+		<ul id="con2"></ul>
+	</div>
+	<div ></div>
+</body>
+</html>

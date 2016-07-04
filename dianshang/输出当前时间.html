@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			showTime();
+		};
+		function checkTime(i){
+			if(i<10){
+				i="0"+i;
+			}
+			return i;
+		}
+		function showTime(){
+			var myDate=new Date();
+			var year=myDate.getFullYear();
+			var month=myDate.getMonth()+1;
+			var date=myDate.getDate();
+			var d=myDate.getDay();
+			var h=myDate.getHours();
+			var m=myDate.getMinutes();
+			var s=myDate.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			var weekDay=new Array(7);
+			weekDay[0]="星期日";
+			weekDay[1]="星期一";
+			weekDay[2]="星期二";
+			weekDay[3]="星期三";
+			weekDay[4]="星期四";
+			weekDay[5]="星期五";
+			weekDay[6]="星期六";
+			document.getElementById("show").innerHTML= year+"年"+month+"月"+date+"日"+weekDay[d]+h+":"+m+":"+s;
+			setTimeout(showTime,500);
+		}
+	</script>
+</head>
+<body>
+	<div class="content1">
+		<div id="show">显示时间的位置</div>
+	</div>
+</body>
+</html>

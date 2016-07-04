@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+}
+.baoguo{width: 1000px;margin: 20px auto;height: 3000px;border: 1px solid red;}
+.baoguo p{font-size: 14px;height: 25px;line-height: 25px;}
+.dingbu{height: 590px;border: 1px solid #EED5B7;}
+.dingZuobian{width: 310px;height: 590px;float: left;}
+.dingZuobian img{margin: 20px 50px;}
+.lunbo{width: 270px;height: 60px;border: 1px solid red;margin: 0 auto;}
+.dingYoubian{width: 667px;height: 590px;float: right;border-left: 1px solid #EED5B7;padding-left: 20px;}
+.dingYoubian h2{margin-top: 20px;}
+.jiage,.youhui,.yanse,.guige{margin-top: 20px;}
+.dingYoubian strong{color: #EE4000;font-size: 25px;}
+.songdao{margin-top: 20px;font-size: 14px;}
+.yanse span{display: inline-block;width: 83px;height: 33px;line-height:33px;border: 1px solid #EEC900;text-align: center;}
+.guige{margin-bottom: 50px;}
+.guige span{display: inline-block;width: 123px;height: 28px;line-height: 28px;border: 1px solid #EEC900;text-align: center;margin-top: 10px;}
+.suojin{margin-left: 62px;}
+.shuliang{margin-top: 70px;}
+.xuanze{margin-top: 20px;font-weight: bold;}
+.xuanze strong{color: #EE2C2C;font-size: 14px;}
+.gouwu{width: 180px;height: 50px;line-height:50px;float: left;margin-left: 80px;background: #FF8C00;font-size: 26px;text-align: center;margin-top: 30px;}
+.zhuyi{clear: both;margin-top: 130px;color: #666;}
+.zhongjian{height: 2000px;margin-top: 20px;border: 1px solid black;}
+.zhongZuobian{width: 190px;height: 1600px;float: left;}
+.shangbu{height: 880px;border: 1px solid #EED5B7;background: #EEEEE0;}
+.shangbu h2{height: 40px;line-height: 40px;text-indent: 10px;border-bottom: 1px solid #EED5B7;}
+.shangbu li{list-style: none;height: 200px;text-align: center;padding-top: 10px;}
+.shangbu p{text-align: left;margin: 10px 20px;height: 20px;line-height: 20px;font-size: 12px;}
+.shangbu strong{color: #EE4000;}
+.xiabu{height: 680px;border: 1px solid #EED5B7;background: #EEEEE0;margin-top: 10px;}
+.xiabu h2{height: 40px;line-height: 40px;text-indent: 10px;border-bottom: 1px solid #EED5B7;}
+.xiabu li{list-style: none;height: 200px;text-align: center;padding-top: 10px;}
+.xiabu p{text-align: left;margin: 10px 20px;height: 20px;line-height: 20px;font-size: 12px;}
+.xiabu strong{color: #EE4000;}
+.zhongYoubian{width: 780px;height: 2000px;background: #EEEEE0;float: right;}
+.biaotou{width: 780px;height: 40px;border: 1px solid #EED5B7;}
+.biaoZuobian{width: 390px;height: 40px;line-height: 40px;float: left;font-size: 20px;text-align: center;}
+.biaoYoubian{width: 389px;height: 40px;line-height: 40px;float: right;font-size: 20px;text-align: center;border-left: 1px solid #EED5B7;}
+.xuanchuantu{margin: 30px 90px;}
+.tuijian{margin-left: 20px;height: 150px;}
+.tuijian strong{font-size: 20px;color: #EE5C42;border-bottom: 2px solid #EE5C42;padding-bottom: 3px;}
+.bihuo{border-bottom: 2px solid #666;}
+.bihuo span{font-size: 12px;font-weight: bold;color: #636363;}
+.wenzi{margin-top: 20px;margin-left: 10px;}
+.tupian{margin-left: 20px;height: 150px;margin-top: 40px;}
+.tupian strong{font-size: 20px;color: #EE5C42;border-bottom: 2px solid #EE5C42;padding-bottom: 3px;}
+.chanpintu{margin: 30px;}
+.container{border: 1px solid #EED5B7;height: 1200px;}
+.pingjia{height: 560px;border: 1px solid #EED5B7;margin-top: 20px;}
+
+
+
+
+
+
+
+
+
