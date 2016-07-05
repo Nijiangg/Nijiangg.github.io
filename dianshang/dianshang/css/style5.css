@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+}
+.baoguo{width: 1000px;margin: 0 auto;}
+.jindu{width: 520px;height: 70px;float: right;margin: 10px;}
+.jindutiao div{float: left;}
+.jindutiao{padding: 20px;margin-left: 50px;}
+.yuanxing{width: 20px;height: 20px;line-height:20px;text-align: center;border-radius:50%;}
+.tiaoxing{width: 150px;height: 3px;margin-top: 10px;}
+.jindu span{margin-left: 50px;margin-right:50px;margin-top: 10px;display: block;float: left;}
+.beijing{background: #FFD700;}
+.yanse{background: #8A8A8A;}
+.shouhuo{height: 253px;border: 1px solid #EED5B7;margin-top: 20px;}
+.xinxi{height: 30px;line-height:30px;border-bottom: 1px solid #EED8AE;background: #EEEEE0;text-indent: 10px;color: #9E9E9E;font-size: 16px;}
+.dizhi{margin-top: 30px;margin-left: 30px;}
+.dizhi p{margin-top: 20px;}
+.xxdz{width: 390px;}
+.quhao{width: 80px;}
+.dizhi strong,.xiaoji,.zhijin strong{color: #EE2C2C}
+.haoma{margin-bottom: 30px;}
+.zhifu{height: 130px;border: 1px solid #EED5B7;margin-top: 20px;}
+.xuanze{margin-left: 30px;margin-top: 10px;}
+.xuanze p{margin: 20px 0;}
+.xuanze img{vertical-align: middle;margin: 0 10px;}
+.xuanze span{margin-left: 10px;}
+.fapiao{height: 200px;border: 1px solid #EED5B7;margin-top: 20px;}
+.xuyao{margin-left: 5px;font-size: 14px;}
+.but{width: 70px;margin-top: 20px;margin-right: 20px;}
+.songhuo{height: 360px;border: 1px solid #EED5B7;margin-top: 20px;}
+.fanhui{display: inline-block;float: right;font-size: 12px;margin-right: 20px;color: #0000CD;}
+.mingcheng{height: 30px;line-height:30px;padding-left: 30px;}
+.mingcheng span{display: inline-block;float: right;margin-right: 70px;width: 60px;text-align: center;}
+.bingxiang{height: 100px;border: 1px solid #EED5B7;}
+.bingxiang img{float: left;margin-left: 50px;margin-top: 10px;}
+.haixin{margin-top: 20px;margin-left: 110px;}
+.haixin span{display: inline-block;float: right;margin-right: 70px;width: 60px;text-align: center;}
+.zengpin{margin-top: 30px;margin-left: 110px;}
+.zengpin span{display: inline-block;float: right;margin-right: 357px;}
+.liuyan{height: 40px;line-height: 40px;margin-left: 30px;color: #0000FF;}
+.baoqian{margin-left: 30px;margin-top: 30px;color: #CD0000;}
+.baoqian img{vertical-align: middle;margin-right: 10px;}
+.zhijin{padding-top: 20px;}
+.zhijin img{float: left;margin-left: 30px;}
+.zhijin p{margin-bottom: 10px;margin-left: 120px;}
+.dingdan{height: 175px;margin-top: 20px;border: 1px solid #EED5B7;}
+.jiesuan{float: right;width:200px;height: 100px;margin-right: 20px;margin-top: 40px;}
+.jiesuan p{height: 50px;line-height: 50px;}
+.jiesuan strong{font-size: 30px;color: #FF0000;}
+.jiesuan input{width: 160px;height: 40px;background-color: #FF0000;border: none;font-size: 26px;margin-top: 10px;}
+
+
