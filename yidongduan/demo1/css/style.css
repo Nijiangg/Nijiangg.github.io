@@ -1,0 +1,41 @@
+body,html{ color: rgb(128, 128, 128);position: relative; overflow-x: hidden;width: 100%;padding: 0;margin: 0;background: rgb(255, 255, 255);}
+a{text-decoration: none;}
+ul,li,ol{list-style: none;}
+.baoguo{background: #f3f3f3; padding-top: 5px;height: 92px;}
+.biaodan{margin-top: 53px;}
+.baoguo_btn{margin: 0 15px;border: 1px solid #707070;}
+.sousuo{width: 80%;float: left;height: 35px;}
+.tijiao{width: 20%;height: 35px;}
+.sub_header{background: transparent;}
+#nav_header {width: 100%;height: 43px;font-size: 16px;border-top: 1px solid #cacaca;border-bottom: 1px solid #cacaca;box-shadow: inset 0 -1px 1px #fff;background: #ececec;}
+#nav_header li{float: left;width: 20%;}
+#nav_header a, .pub_Box_tab a{color: #104E8B;}
+
+.pub_Box_tab{height: 37px;line-height: 37px;border-bottom: 1px solid #d6d5d2;border-top: 1px solid #d6d5d2;background: -webkit-gradient(linear,left top ,left bottom,from(#f5f5f5),to(#ececec));}
+.pub_Box_tab h2{border-bottom: 2px solid #3997fd;width: 80px;height: 30px;line-height: 33px;text-align: center;color: #3e5700;margin-left: 10px;margin-top: 0;float: left;font-size: 16px;}
+.pub_Box_tab span{display: block;float: right;margin-right: 10px;}
+.subnav_list{ background: #fff;}
+.h_album_box{padding-left: 0;}
+.subnav_list a{color: #373737;display: block;}
+.subnav_list li{padding: 5px 8px 8px 8px;height: 70px;}
+.image{float: left;}
+.image img{border: 1px solid #cacaca;padding: 3px;-webkit-border-radius: 5px;}
+.h_album_info{margin-left: 85px;margin-top: 0px;font-size: 100%;}
+.black{ color: #333; font-weight: bold;}
+.black, .pt_r{ display: block;width: 90%;overflow: hidden;margin: 0;height: 25px;line-height: 25px;}
+.pt_r{ font-size: 12px; }
+.game_list{ width: 100%;padding-bottom: 10px;padding-top: 5px;clear: both;}
+.game_list ul , .subnav_list ul{ padding-left: 0;padding-top: 0; }
+.game_list img{width: 77px;height: 99px;border: 2px solid #CCCCCC;margin-top: 2px;}
+.game_list li{float: left;width: 33.333%;text-align: center;}
+.game_list span{display: block;font-size: 14px;color: #333;line-height: 24px;width: 85px;margin: auto;text-align: center;text-shadow: 0 1px 1px rgba(100, 100, 100, .2);}
+.pub_clear{ clear: both; }
+.subnav_list .tip{float: left;padding:0;width: 30%;text-align: center;}
+.yaosile{width: 80px;height: 35px;line-height: 35px;margin-left: 10px;background: #dedede;border-radius: 5px;}
+#footer{ text-align: center;background: #f0f0f0; }
+.go_top{ display: block;margin-bottom: 20px;color: #333; }
+.copyright{ background-color: #dbdbdb;height: 40px;margin-top: 5px; }
+
+
+
+
