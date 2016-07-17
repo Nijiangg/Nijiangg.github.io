@@ -1,0 +1,59 @@
+*{ margin: 0;padding: 0; }
+a{ text-decoration: none; }
+ul,li,ol{ list-style: none; }
+.toubu{ height: 25px;line-height:25px;background: #edebec;margin-left: 20px;width: 100%; }
+.toubu a{ color: #666; }
+.denglu{ float: left;width: 50%; }
+.suosou{ float: left;width: 50%; }
+.text_search{ width: 25%; }
+.logo{ margin-left: 20px;margin-top: 20px; }
+.main-nav{ height: 30px;line-height: 30px;background: #000;color: #fff; }
+.main-nav a{ color: #fff;width: 20%;display: inline-block;text-align: center;margin-left: 10px; }
+.lunbo{ margin-top: 10px;margin-left: 10px; }
+.fenlei{ height: 75px;line-height: 20px;padding-left: 10px;font-family: Tahoma, Geneva, sans-serif; }
+.bold{ font-weight: bold; }
+.paixu{ padding-left: 10px;font-family: Tahoma, Geneva, sans-serif;margin-top: 10px;margin-bottom: 10px; }
+.shuoming{ padding-left: 10px; }
+.shuoming a , .fenlei a , .paixu a , .jieshu a{ color: #43609a; }
+.yanse{ color: #ec1a59!important; }
+.zuotu , .jiage{ float: left;margin-left: 10px;margin-top: 10px; }
+.jiage{ height: 100px;line-height: 25px;margin-left: 30px; }
+.liebiao li{ border-bottom: 1px solid #666;padding-top: 10px;height: 159px; }
+.clear { clear: both; }
+.xuanxiangka a{ margin-left: 10px;height: 20px;line-height: 20px;color: #000;margin-top: 5px;display: inline-block;margin-bottom: 5px; }
+.jieshu a{ display: block;float: left;width: 30%;margin-top: 5px;margin-bottom: 5px;text-align: center; }
+.jumei{ margin-left: 10px;margin-top: 10px;margin-bottom: 10px; }
+.zuihou{ margin-left: 10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
