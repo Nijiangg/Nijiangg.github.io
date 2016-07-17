@@ -1,0 +1,53 @@
+*{ margin: 0;padding: 0; }
+body,html{ color: rgb(128, 128, 128);position: relative; overflow-x: hidden;width: 100%;padding: 0;margin: 0;background: rgb(255, 255, 255);}
+ul,li,ol{list-style: none;}
+a{text-decoration: none;color: #003a94;}
+.bar-title{height: 37px;padding: 5px;background: #2c69c5;}
+.shouye{color: white;margin-left: 10px;margin-top: 10px;display: inline-block;}
+.bar-title h3{color: white;margin: 0 auto;display: inline-block;text-align: center;font-weight: bold;width: 70%;}
+.fanhui{ color: white; }
+.shangbu{ margin-top: 5px;height: 115px;margin-bottom:3px; }
+.tupian{width:80px;height: 112px;float: left;margin-left: 5px;margin-right:10px;padding: 1px;border: 1px solid #ccc;}
+.zhuangtai p{height:24px; }
+.shuoming{margin-top: 15px;padding-left: 5px;padding-right: 5px;line-height: 23px;font: 14px/1.5 tahoma,arial,"微软雅黑";text-indent: 30px;color: #999;border-bottom: 1px dashed #ccc;padding: 5px;}
+.zuixin{ margin-top: 15px;margin-left: 5px;width: 100%; }
+.zuixin p{ height: 25px;line-height: 25px;width: 100%; }
+.mulu{ margin-top: 15px;border-bottom: 1px solid #ccc; }
+.mulu h4{ text-align: center;background-color: #E4E7E5; }
+.mulu p{ margin-left: 10px; }
+.liebiao{ margin-left: 40px;margin-top: 10px; }
+.liebiao li{ margin: 10px auto; }
+.weibu{ margin-top: 10px; }
+.weibu li{ float: left;width: 20%;height: 25px;line-height: 25px;text-align: center;font-size: 12px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
