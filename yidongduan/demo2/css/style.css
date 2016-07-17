@@ -17,7 +17,7 @@ ul,li,ol{ list-style: none; }
 .shuoming a , .fenlei a , .paixu a , .jieshu a{ color: #43609a; }
 .yanse{ color: #ec1a59!important; }
 .zuotu , .jiage{ float: left;margin-left: 10px;margin-top: 10px; }
-.jiage{ height: 100px;line-height: 25px;margin-left: 30px; }
+.jiage{ height: 100px;line-height: 20px;margin-left: 30px; }
 .liebiao li{ border-bottom: 1px solid #666;padding-top: 10px;height: 159px; }
 .clear { clear: both; }
 .xuanxiangka a{ margin-left: 10px;height: 20px;line-height: 20px;color: #000;margin-top: 5px;display: inline-block;margin-bottom: 5px; }
