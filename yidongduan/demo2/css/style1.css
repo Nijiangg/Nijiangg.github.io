@@ -1,0 +1,50 @@
+*{ margin: 0;padding: 0; }
+a{ text-decoration: none; }
+ul,li,ol{ list-style: none; }
+a{ list-style: none; }
+.toubu{ height: 25px;line-height:25px;background: #edebec;width: 100%;padding-left: 10px; }
+.toubu a{ color: #666; }
+.denglu{ float: left;width: 50%; }
+.suosou{ float: left;width: 50%; }
+.text_search{ width: 25%; }
+.logo{ margin-left: 20px;margin-top: 20px; }
+.main-nav{ height: 30px;line-height: 30px;background: #000;color: #fff; }
+.main-nav a{ color: #fff;width: 20%;display: inline-block;text-align: center;margin-left: 10px; }
+.yanse{ color: #ec1a59!important; }
+.jieshu a{ display: block;float: left;width: 30%;margin-top: 5px;margin-bottom: 5px;text-align: center;color: #43609c; }
+.jumei{ margin-left: 10px;margin-top: 10px;margin-bottom: 10px; }
+.zuihou{ margin-left: 10px; }
+.clear { clear: both; }
+.container{ padding-left: 10px; }
+.tuangou{ height: 30px;line-height: 30px;padding: 2px auto;margin-bottom: 2px; }
+.jianjie{ width: 100%; }
+.jianjie a{ height: 30px;line-height: 30px;display: inline-block;text-align: center;color: #43609c;padding: 0 5px;}
+.wenzi{ text-indent: 30px;padding: 2px 5px;line-height: 25px; }
+.tupian{ margin: 20px; }
+.jiada{ font-size: 25px; }
+.zhekou{ margin-left: 55px;margin-top: 5px;margin-bottom: 5px; }
+.qianggou{ float: right;margin-top: 10px;margin-bottom: 10px;margin-right: 40px; }
+.baozhang{ margin-top: 10px;margin-bottom: 5px;color: #666; }
+.tiaokuan{ font-weight: bold;text-indent: 30px;margin-bottom: 10px; }
+.xuanxiang{ margin-left: 10px;margin-bottom: 10px;  }
+.xuanxiang a{ color: #43609c; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

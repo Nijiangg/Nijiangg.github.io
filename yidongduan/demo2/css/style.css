@@ -1,10 +1,10 @@
 *{ margin: 0;padding: 0; }
 a{ text-decoration: none; }
 ul,li,ol{ list-style: none; }
-.toubu{ height: 25px;line-height:25px;background: #edebec;margin-left: 20px;width: 100%; }
+.toubu{ height: 25px;line-height:25px;background: #edebec;width: 100%;padding-left: 10px; }
 .toubu a{ color: #666; }
-.denglu{ float: left;width: 50%; }
-.suosou{ float: left;width: 50%; }
+.denglu{ float: left;width: 55%; }
+.suosou{ float: left;width: 45%; }
 .text_search{ width: 25%; }
 .logo{ margin-left: 20px;margin-top: 20px; }
 .main-nav{ height: 30px;line-height: 30px;background: #000;color: #fff; }
