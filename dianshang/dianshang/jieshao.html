@@ -5,6 +5,52 @@
 	<title>产品介绍</title>
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
 	<link rel="stylesheet" type="text/css" href="css/style4.css">
+	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var page = 1;
+			var i = 4;
+			$('span.next').click(function(){
+				var $parent = $('div.weibu');
+				var $show = $('div.content_list');
+				var $content = $('div.content');
+				var $height = $content.height();
+				var len = $show.find('li').length;
+				var page_count = Math.ceil(len/i);
+				if(!$show.is(':animated')){
+					if(page == page_count){
+					$show.animate({top:'0'},'slow');
+					page = 1;
+
+				}else{
+					$show.animate({top:'-='+$height},'slow');
+					page++;
+				}
+				$('div.hightLight').find('span').eq((page-1)).addClass('current').siblings().removeClass('current');
+				}
+			});
+
+			$('span.prev').click(function(){
+				var $parent = $('div.weibu');
+				var $show = $('div.content_list');
+				var $content = $('div.content');
+				var $height = $content.height();
+				var len = $show.find('li').length;
+				var page_count = Math.ceil(len/i);
+				if(!$show.is(':animated')){
+					if(page == 1){
+					$show.animate({top:'-='+$height*(page_count-1)},'slow');
+					page = page_count;
+
+				}else{
+					$show.animate({top:'+='+$height},'slow');
+					page--;
+				}
+				$('div.hightLight').find('span').eq((page-1)).addClass('current').siblings().removeClass('current');
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="header">
@@ -109,6 +155,71 @@
 						</li>
 					</ul>
 				</div><!-- xiabu结束 -->
+				<div class="weibu">
+					<div class="caption">
+						<div class="hightLight">
+							<strong style="font-size: 20px">热卖</strong>
+							<span class="current"></span><span></span><span></span>
+						</div><!-- hightLight结束 -->
+						<div class="change_btn">
+							<span class="prev">▽</span><span class="next">△</span>
+						</div>
+					</div><!-- caption结束 -->
+					<div class="content">
+						<div class="content_list">
+							<ul>
+								<li>
+									<img src="images/remai1.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai2.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai3.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai4.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai5.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai6.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai7.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai8.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai9.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai10.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai11.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+								<li>
+									<img src="images/remai12.png">
+									<p><a href="#">华为 P9 Plus， 莱卡双摄像头， 两级压感触控</a></br><strong>￥3999.00</strong></p>
+								</li>
+							</ul>
+						</div><!-- content_list结束 -->
+					</div><!-- content结束 -->
+				</div><!-- weibu结束 -->
 			</div><!-- zhongZuobian结束 -->
 			<div class="zhongYoubian">
 				<div class="container">

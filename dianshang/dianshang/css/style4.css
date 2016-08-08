@@ -28,15 +28,32 @@ body{
 .zhongjian{height: 2300px;margin-top: 20px;}
 .zhongZuobian{width: 190px;height: 1600px;float: left;}
 .shangbu{height: 880px;border: 1px solid #EED5B7;background: #EEEEE0;}
-.shangbu h2{height: 40px;line-height: 40px;text-indent: 10px;border-bottom: 1px solid #EED5B7;}
+.shangbu h2 , .caption{height: 40px;line-height: 40px;text-indent: 10px;border-bottom: 1px solid #EED5B7;}
 .shangbu li{list-style: none;height: 200px;text-align: center;padding-top: 10px;}
 .shangbu p{text-align: left;margin: 10px 20px;height: 20px;line-height: 20px;font-size: 12px;}
 .shangbu strong{color: #EE4000;}
 .xiabu{height: 680px;border: 1px solid #EED5B7;background: #EEEEE0;margin-top: 10px;}
 .xiabu h2{height: 40px;line-height: 40px;text-indent: 10px;border-bottom: 1px solid #EED5B7;}
 .xiabu li{list-style: none;height: 200px;text-align: center;padding-top: 10px;}
-.xiabu p{text-align: left;margin: 10px 20px;height: 20px;line-height: 20px;font-size: 12px;}
-.xiabu strong{color: #EE4000;}
+.xiabu p {text-align: left;margin: 10px 20px;height: 20px;line-height: 20px;font-size: 12px;}
+.xiabu strong , .weibu strong{color: #EE4000;}
+.weibu {height: 778px;border: 1px solid #EED5B7;background: #EEEEE0;margin-top: 10px; }
+.hightLight span{ display: inline-block;width: 6px;height: 6px;border: 1px solid black;border-radius: 3px;margin-left: 2px;margin-top: 18px; }
+.change_btn span{ display:inline-block;float:left;border: 1px solid #999;width:30px;height: 20px;line-height:20px;margin-top: 10px;border-radius: 3px;background: black;color:#fff;}
+.current{ background: blue; }
+
+
+
+.content_list img{ width: 80px;height: 110px; }
+.hightLight , .change_btn{ float: left;margin-right: 10px; }
+.weibu li{ list-style: none;height: 180px;text-align: center;padding-top: 5px;}
+.weibu p{ display:block;text-align: left;margin: 0px 20px;height: 20px;line-height: 20px;font-size: 12px; }
+.content{ position: relative;height: 740px;width: 190px;overflow: hidden; }
+.content_list{ position: absolute; }
+
+
+
+
 .zhongYoubian{width: 780px;height: 2230px;float: right;}
 .biaotou{width: 778px;height: 40px;border-bottom: 1px solid #EED5B7;background: #EEEEE0;}
 .biaoZuobian{width: 388px;height: 40px;line-height: 40px;float: left;font-size: 20px;text-align: center;}
