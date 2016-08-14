@@ -6,12 +6,14 @@
 .huanying{height:85px;line-height: 85px;margin-left: 200px;color: #eee;}
 .denglu{width: 460px;height: 350px;border: 1px solid #EED5B7;margin: 20px auto;font-size: 14px;}
 .denglu form{margin-top: 30px;margin-left: 80px;}
-.txt{width: 300px;height: 35px;margin-top: 5px;margin-bottom: 20px;}
+.required{width: 300px;height: 35px;margin-top: 5px;margin-bottom: 20px;}
 .sub{width: 300px;height: 35px;margin-top: 30px;margin-bottom: 30px;font-size: 16px;}
+.txt{ width: 300px;height: 35px;margin-top: 10px;margin-bottom: 10px;font-size: 16px; }
 .shuoming{margin-left: 80px;margin-bottom: 10px;}
 .zhuce{width: 120px;height: 30px;background: #228B22;line-height: 30px;text-align: center;font-size: 16px;margin-left: 620px;}
-.yongxiangzhuce{width: 580px;height: 635px;border: 1px solid #EED5B7;margin: 20px auto;}
-.yongxiangzhuce p{text-align: right;margin-right: 80px;margin-top: 20px;font-size: 14px;}
+.yongxiangzhuce{width: 650px;height: 635px;border: 1px solid #EED5B7;margin: 20px auto;}
+.yongxiangzhuce div{text-align: left;margin-left: 80px;margin-top: 20px;font-size: 14px;}
+.yongxiangzhuce label{ width: 90px;display: inline-block;text-align:center; }
 .yongxiangzhuce strong{color: #EE2C2C;}
 .yongxiangzhuce span{color: #228B22;}
 

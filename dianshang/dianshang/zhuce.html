@@ -4,7 +4,72 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
 	<link rel="stylesheet" type="text/css" href="css/style6.css">
+	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
 	<title>注册</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//创建*
+			 $('form :input.required').each(function(){
+			 	var $required = $('<strong class="height">*</strong>');
+			 	$(this).parent().append($required);
+				 })
+			$('form :input').blur(function(){
+				var $parent = $(this).parent();
+				//删除以前的提醒元素
+				$parent.find(".formtips").remove();
+				//验证用户名
+				if($(this).is('#username')){
+					if(this.value == '' || this.value.length < 6){
+						var errorMsg = '请输入至少6位';
+						$parent.append('<span class="formtips onError">' + errorMsg +'</span>')
+					}else{
+						var okMsg = '√';
+						$parent.append('<span class="formtips onSuccess" style="color:red;font-weight:bold">' + okMsg +'</span>')
+					};
+				};
+				//验证邮箱
+				if($(this).is('#email')){
+					if(this.value == '' || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) )){
+						var errorMsg = '请输入正确的E-mail地址';
+						$parent.append('<span class="formtips onError">' + errorMsg +'</span>') 
+					}else{
+						var okMsg = '√';
+						$parent.append('<span class="formtips onSuccess" style="color:red;font-weight:bold">' + okMsg +'</span>')
+					};
+				};
+				//验证密码
+				if($(this).is('#password')){
+					if(this.value == '' || this.value.length < 6){
+						var errorMsg = '请输入至少6位';
+						$parent.append('<span class="formtips onError">' + errorMsg +'</span>');
+					}else{
+						var okMsg = '√';
+						$parent.append('<span class="formtips onSuccess" style="color:red;font-weight:bold">' + okMsg +'</span>')
+					};
+				};
+				//确认密码，不成功
+			/*	if($(this).is('#surePassword')){
+					if(this.value != $('#password').value){
+						var errorMsg = '密码不一致，请重新输入';
+						$parent.append('<span class="formtips onError">' + errorMsg +'</span>');
+					}else{
+						var okMsg = '√';
+						$parent.append('<span class="formtips onSuccess" style="color:red;font-weight:bold">' + okMsg +'</span>')
+					};
+				}; */
+				//注册成功
+				$('#send').click(function(){
+                	$("form :input.required").trigger('blur');
+                	var numError = $('form .onError').length;
+                	if(numError){
+                    	return false;
+                	} 
+                	alert("注册成功,密码已发到你的邮箱,请查收.");//连续弹出多次有bug
+         		});
+			})
+	
+		})
+	</script>
 </head>
 <body>
 	<div class="header">
@@ -21,19 +86,40 @@
 			</div><!--logo结束-->
 		</div><!--container2结束-->
 	</div><!-- header结束 -->
-
-
-
 	<div class="baoguo">
 		<div class="yongxiangzhuce">
-				<form action="#" method="get">
-					<p><strong>※</strong> 账户名：<input type="text" name="" class="txt"></p>
-					<p><strong>※</strong> 请设置密码：<input type="password" name=""  class="txt"></p>
-					<p><strong>※</strong> 请确认密码：<input type="password" name=""  class="txt"></p>
-					<p><strong>※</strong> 邮箱：<input type="text" name="" class="txt"></p>
-					<p><strong>※</strong> 地址：<input type="text" name="" class="txt"></p>
-					<p><input type="checkbox" name="">我已阅读并同意<span>《用户注册协议》</span></p>
-					<p><input type="submit" name="" value="登录" class="sub"></p>
+				<form action="#" method="post">
+					<div>
+						
+						<label for="username">账户名：</label>
+						<input type="text" id="username" class="required">
+					</div>
+					<div>
+						
+						<label for="password"> 请设置密码：</label>
+						<input type="password" id="password"  class="required ">
+					</div>
+					<div>
+						
+						<label for="password"> 请确认密码：</label>
+						<input type="password" id="surePassword"  class="required">
+					</div>
+					<div>
+						
+						<label for="email"> 邮箱：</label>
+						<input type="text" id="email" class="required">
+					</div>
+					<div>
+						
+						<label for="tel"> 电话：</label>
+						<input type="text" name="" class="required">
+					</div>
+					<div>
+						<input type="checkbox" name="">我已阅读并同意<span>《用户注册协议》</span>
+					</div>
+					<div>
+						<input type="submit" id="send" value="提交" class="sub">
+					</div>
 				</form>
 		</div><!-- denglu结束 -->
 	</div><!-- baoguo结束 -->
