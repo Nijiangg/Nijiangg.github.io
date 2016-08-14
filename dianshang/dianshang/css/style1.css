@@ -10,6 +10,15 @@ a{text-decoration: none;color: black;}
 	width: 100%;
 	background: #FFA54F;
 }
+.tupian_ma{ 
+	height:85px;
+	width: 140px;
+	position: absolute;
+	top: 30px;left: 50%;
+	margin-left: 500px;
+	color: red;
+	padding-top: 3px;
+ }
 .wrap{
 	width: 1000px;
 	margin: 0 auto;

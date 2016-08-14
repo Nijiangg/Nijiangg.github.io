@@ -224,18 +224,22 @@ ul{list-style:none;}
            bottom:-20px;
            }    
 
-
-
-
-
-
-
-
-
-
-
-
-
+.left_area{ border: 1px solid black;height:1000px;width:300px;left:50%;position: absolute;margin-left: 500px;top: 150px; }
+.tou{ text-align: center;padding: 5px 0; }
+.jinbi{ margin-top: 5px; }
+.jinbi img{ vertical-align: middle; }
+.color{ color: red; }
+.kaidian{ margin-top: 10px; }
+.kaidian a{ display: inline-block;width: 80px;height: 27px;line-height: 27px;background: #FF8247;color: #fff;margin-left: 10px;font-size: 16px;font-weight: bold; }
+.guize{ margin-top: 20px; }
+.gonggao a{ width: 15%;height: 25px;line-height: 25px;display: inline-block;text-align: center;margin-left: 14px;border-bottom: 2px solid #fff; }
+.gonggao a:hover{ border-bottom: 2px solid red;font-weight: bold;color: red; }
+.xuanxiangka div{ text-align: left;padding-left: 20px;display: none;  }
+.xuanxiangka a{ display: inline-block;margin: 5px auto;margin-left: 10px;}
+.xuanxiangka a:hover , .biaoge a:hover{ color: red; }
+.biaoge{ margin-top: 20px; }
+.biaoge li{ float: left;width: 25%;height: 50px;display: inline-block;text-align: center;margin: 10px 0; }
+.biaoge img{ width: 25px;height: 25px;margin-bottom: 3px; }
 
 
 

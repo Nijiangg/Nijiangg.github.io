@@ -7,47 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
 	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
 	<script type="text/javascript">
-	// window.onload = function(){
-	
-	// 	var aLis=$('.left_bar li')
-	// 	for( var i = 0;i < aLis.length;i++){
-	// 		aLis[i].onmouseover = function(){
-	// 			this.className = "lihover";
-	// 		};
-	// 		aLis[i].onmouseout = function(){
-	// 			this.className = '';
-	// 		};
-	// 	};
-	// 	var index =0;//当前显示li的下标
-		
-	// 		var l = $(".pic ul li").size();
-	// 		setInterval("change()",2500); //定时轮换
-			
-	// 		function change(){//图片轮换
-				
-				
-	// 			if(index == l){
-	// 				index = 0;
-	// 			}else{
-	// 				index++;
-	// 				}
-	// 				$(".pic ul li").eq(index).fadeIn(100).siblings().fadeOut(100);
-	// 			$(".nav ul li").eq(index).addClass("select").siblings().removeClass("select");
-	// 			//显示动态效果图片
-	// 			$(".pic ul li").eq(index).find(".img1").animate({"left":"0px"},1000,function(){
-	// 				$(".pic ul li").eq(index).find(".img2").css("display","block");
-	// 				$(".pic ul li").eq(index).find(".img2").animate({"left":"0px"},1000);
-	// 			});
-	// 			//还原上一个li的样式
-	// 			$(".pic ul li").eq(index).siblings().find(".img1").css("left","-760px");
-	// 			$(".pic ul li").eq(index).siblings().find(".img2").css("left","-20px");
-	// 			$(".pic ul li").eq(index).siblings().find(".img2").css("display","none");
-				
-				
-	// 		}	
-	
-	// 	}
-
 		$(document).ready(function(){
 			var Lis=$('.left_bar li')
 			var aLis = $(".pic ul li");
@@ -85,18 +44,23 @@
 		 			this.className = '';
 		 		};
 	 		};
-
+	 		//选项卡
+	 		var oDiv = $('.xuanxiangka div');
+	 		var aBtn = $('.gonggao a');
+			aBtn.mouseover(function(){
+				oDiv.eq($(this).index()).css('display','block').siblings().css('display','none')
+			})
+		 
+		
+		
 		})
-			
-			
-			
-
-			
-			
-			
+	
 	</script>
+	<style type="text/css">
+		
+	</style>
 </head>
-<body>
+<body style="overflow:scroll;overflow-x:hidden">
 	<div class="header">
 		<div class="container1">
 			<div class="title">
@@ -114,6 +78,7 @@
 					<div class="liebiao"><a href="#">手机</a><a href="#">饼干</a><a href="#">茶叶</a><a href="#">黄芪</a><a href="#">香薰</a><a href="#">燕窝</a><a href="#">西洋参</a></div>
 				</div>
 				<div class="shopCar">购物车(0)</div>
+				
 			</div><!--logo结束-->
 		</div>
 		<div class="container3">
@@ -761,6 +726,141 @@
 			<div class="dibu"></div><!--dibu结束-->
 		</div><!--container_right结束-->
 	</div><!--wrap结束-->
+		<div class="shipin">
+			<img src="images/jiayong.png">
+			<h1>花鸟鱼虫</h1>
+			<div class="more"><a href="#">更多&gt;&gt;</a></div>
+	</div><!--shipin结束-->
+	<div class="wrap">
+		<div class="container_left">
+			<img class="image3" src="images/ganhuo.png">
+			<div class="baoguo">
+				<h1>满299减10</h1>
+				<h3>惊喜好礼等你拿</h3>
+				<input type="button" name="btn" value="了解详情">
+			</div>
+		</div><!--container_left结束-->
+		<div class="container_right">
+			<div class="shangbu">
+				<ul>
+					<li>
+						<img src="images/yu.png">
+						<h2><a href="#">惊喜好礼等你拿</a></h2>
+						<h3>350元</h3>
+					</li>
+					<li>
+						<img src="images/yu.png">
+						<h2><a href="#">惊喜好礼等你拿</a></h2>
+						<h3>350元</h3>
+					</li>
+					<li>
+						<img src="images/yu.png">
+						<h2><a href="#">惊喜好礼等你拿</a></h2>
+						<h3>350元</h3>
+					</li>
+					<li>
+						<img src="images/yu.png">
+						<h2><a href="#">惊喜好礼等你拿</a></h2>
+						<h3>350元</h3>
+					</li>
+				</ul>
+			</div><!--shangbu结束-->
+			<div class="zhongbu">
+				<ul>
+					<li>
+						<img src="images/hua.png">
+						<p><a href="#">红玫瑰 产自新西兰 99朵</a></br><span>￥1314.00</span></p>
+					</li>
+					<li>
+						<img src="images/hua.png">
+						<p><a href="#">红玫瑰 产自新西兰 99朵</a></br><span>￥1314.00</span></p>
+					</li>
+					<li>
+						<img src="images/hua.png">
+						<p><a href="#">红玫瑰 产自新西兰 99朵</a></br><span>￥1314.00</span></p>
+					</li>
+					<li>
+						<img src="images/hua.png">
+						<p><a href="#">红玫瑰 产自新西兰 99朵</a></br><span>￥1314.00</span></p>
+					</li>
+				</ul>
+			</div><!--zhongbu结束-->
+			<div class="dibu"></div><!--dibu结束-->
+		</div><!--container_right结束-->
+
+	</div><!--wrap结束-->
+	<div class="tupian_ma">
+		<img src="images/erweima.png">
+		<span>手机淘宝</span>
+	</div>
+	<div class="left_area">
+		<div class="tou">
+			<img src="images/tou.png">
+			<p>Hi!你好</p>
+			<p class="jinbi"><img src="images/jinbi.png"><span class="color">领淘金币</span>或去<span class="color">会员俱乐部</span></p>
+			<div class="kaidian">
+				<a href="denglu.html">登录</a><a href="zhuce.html">注册</a><a href="#">开店</a>
+			</div>
+		</div>
+		<div class="guize">
+			<div class="gonggao"><a href="#">公告</a><a href="#">规则</a><a href="#">论坛</a><a href="#">安全</a><a href="#">公益</a>
+			</div>
+			<div class="xuanxiangka">
+				<div style="display:block;">
+					<p><a href="#" class="color">阿里第一季度收入同比增长59% 全面超预期</a></p>
+					<p><a href="#">CEO详解业绩动力来源 外媒：中国经济晴雨表</a></p>
+				</div>
+				<div>
+					<p><a href="#" class="color">开店认证假货规则变更</a><a href="#">未经备案商品禁售规则</a></p>
+					<p><a href="#">新增旅行市场WIFI规则</a><a href="#">淘宝争议处理规则变更</a></p>
+				</div>
+				<div>
+					<p><a href="#">G20杭州快递影响</a><a href="#">爱育之心做衣服</a></p>
+					<p><a href="#" class="color">700家热风淘宝路</a><a href="#">是赚钱还是骗子</a></p>
+				</div>
+				<div>
+					<p><a href="#">朋友圈卖假货被抓</a><a href="#">代运营生态净化启动</a></p>
+					<p><a href="#">教你完美避开职业差评</a><a href="#" class="color">警惕：假客服组团来袭</a></p>
+				</div>
+				<div>
+					<p><a href="#" class="color">阿里捐赠700万元救灾</a><a href="#"> 阿里与残联出助残政策</a></p>
+					<p><a href="#">公益宝贝卖家发票索取</a><a href="#">公益机构淘宝开店攻略</a></p>
+				</div>
+			</div><!--xuanxiangka结束-->
+		</div><!--guize结束-->
+		<div class="biaoge">
+			<ul>
+				<li><img src="images/huafei.png"><br /><a href="#">充话费</a></li>
+				<li><img src="images/youxi.png"><br /><a href="#">游戏</a></li>
+				<li><img src="images/lvxing.png"><br /><a href="#">旅行</a></li>
+				<li><img src="images/baoxian.png"><br /><a href="#">保险</a></li>
+				<li><img src="images/caipiao.png"><br /><a href="#">彩票</a></li>
+				<li><img src="images/dianying.png"><br /><a href="#">电影</a></li>
+				<li><img src="images/dianwaimai.png"><br /><a href="#">点外卖</a></li>
+				<li><img src="images/licai.png"><br /><a href="#">理财</a></li>
+				<li><img src="images/zhaofuwu.png"><br /><a href="#">找服务</a></li>
+				<li><img src="images/yinyue.png"><br /><a href="#">音乐</a></li>
+				<li><img src="images/shuidianmei.png"><br /><a href="#">水电煤</a></li>
+				<li><img src="images/huochepiao.png"><br /><a href="#">火车票</a></li>
+			</ul>
+			<div class="xuanxiang">
+				<div></div>
+			</div><!--xuanxiang结束-->
+		</div><!--biaoge结束-->
+	</div><!--left_area结束-->
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="footer">
 		<div class="footer_wrap">
 			<p>关于淘宝 帮助中心 开放平台 联系我们 诚聘英才</p>
