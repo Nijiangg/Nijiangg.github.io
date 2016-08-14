@@ -74,9 +74,22 @@ a{text-decoration: none;color: black;}
 	font-size: 10px;
 	font-weight: bold;
 }
+/* 轮播图*/
+.main{position:relative;width: 800px;height: 325px;display: inline-block;float:right;}
+.pic{width:760px;height:300px;overflow:hidden;}
+ul{list-style:none;}
+.pic ul li{width:760px;height:300px;position:relative;overflow:hidden;}
+.img1{position:absolute;left:-760px;top:0px;}
+.img2{position:absolute;left:-20px;top:0px;display:none;}
+
+/*按钮区域*/
+.nav ul li{border:1px solid white;width:15px;height:15px;float:left;margin-left:5px;}
+.nav{width:125px;height:30px;position:absolute;left:620px;bottom:10px;}
+.select{background-color:white;}
 
 
-.right_bar{width: 800px;display: inline-block;float: right;height: 325px;background: red;}
+
+
 .more{float: right;margin-top: 40px;margin-right: 20px;}
 .gengduo{ float: right;margin-right: 20px;margin-top: 20px; }
 .container_left{width: 190px;height: 400px;background: #FF8C69;float: left;}
