@@ -50,9 +50,43 @@
 			aBtn.mouseover(function(){
 				oDiv.eq($(this).index()).css('display','block').siblings().css('display','none')
 			})
-		 
-		
-		
+		 	//选项卡2
+		 	var ali = $('.xuan_ka');
+		 	var adiv = $('.xuanxiang div');
+		 	var guan = $('.guanbi');
+		 	ali.mouseover(function(){
+				adiv.eq($(this).index()).css('display','block').siblings().css('display','none')
+			});
+			guan.click(function(){
+				adiv.css('display','none');
+			})
+			//二维码
+			var oPng = $('.png');
+
+			var odiv = $('.jpg');
+			oPng.mouseover(function(){
+				$(this).siblings().css('display','block')
+			});
+			oPng.mouseout(function(){
+				$(this).siblings().css('display','none')
+			});
+			//淘宝头条轮播图
+			var bo = $('.bo');
+			function fnMove(){
+				if(index == 2){
+					index = 0;
+				}else{
+					index++;
+				}
+				bo.eq(index).css('display','block').siblings().css('display','none')
+			};
+			timer=setInterval(fnMove,1000);
+			bo.mouseover(function(){
+				clearInterval(timer)
+			});
+			bo.mouseout(function(){
+				timer=setInterval(fnMove,1000);
+			})
 		})
 	
 	</script>
@@ -830,10 +864,10 @@
 		</div><!--guize结束-->
 		<div class="biaoge">
 			<ul>
-				<li><img src="images/huafei.png"><br /><a href="#">充话费</a></li>
-				<li><img src="images/youxi.png"><br /><a href="#">游戏</a></li>
-				<li><img src="images/lvxing.png"><br /><a href="#">旅行</a></li>
-				<li><img src="images/baoxian.png"><br /><a href="#">保险</a></li>
+				<li class="xuan_ka"><img src="images/huafei.png"><br /><a href="#">充话费</a></li>
+				<li class="xuan_ka"><img src="images/youxi.png"><br /><a href="#">游戏</a></li>
+				<li class="xuan_ka"><img src="images/lvxing.png"><br /><a href="#">旅行</a></li>
+				<li class="xuan_ka"><img src="images/baoxian.png"><br /><a href="#">保险</a></li>
 				<li><img src="images/caipiao.png"><br /><a href="#">彩票</a></li>
 				<li><img src="images/dianying.png"><br /><a href="#">电影</a></li>
 				<li><img src="images/dianwaimai.png"><br /><a href="#">点外卖</a></li>
@@ -844,9 +878,165 @@
 				<li><img src="images/huochepiao.png"><br /><a href="#">火车票</a></li>
 			</ul>
 			<div class="xuanxiang">
-				<div></div>
+				<div>
+					<p class="chonghuafei"><a href="#" style="color:red;">充话费</a><a href="#">充流量</a><a href="#">充固话</a><a href="#">宽带</a></p><span class="guanbi">×</span>
+					<p class="changdu"><input type="text" placeholder="请输入手机号码"></p>
+					<p class="changdu">
+						<select>
+							<option>50元</option>
+							<option>100元</option>
+							<option>300元</option>
+							<option>500元</option>
+							<option>1000元</option>
+						</select>
+					</p>
+					<p class="shoujia">售价 <span class="color">￥49-49.8</span></p>
+					<p><a href="#" class="liji">立即充值</a></p>
+				</div>
+				<div>
+					<p class="chonghuafei"><a href="#" style="color:red;">点卡</a><a href="#">魔兽世界</a><a href="#">网页游戏</a><a href="#">QQ</a></p><span class="guanbi">×</span>
+					<p class="changdu">
+						<input type="text" name="游戏" value="游戏">
+					</p>
+					<p class="changdu">
+						<select>
+							<option>1元</option>
+							<option>10元</option>
+							<option>35元</option>
+							<option>100元</option>
+							<option>1000元</option>
+						</select>
+					</p>
+					<p class="shoujia">￥<span class="color">0.98 </span> <input type="radio" value="自动充值"> 自动充值 <input type="radio" value="购买卡密"> 购买卡密</p>
+					<p><a href="#" class="liji">立刻充值</a> 超值游戏礼包马上领取！</p>
+				</div>
+				<div>
+					<p class="chonghuafei"><a href="#" style="color:red;">国内机票</a><a href="#">国际机票</a><a href="#">度假门票</a><a href="#">火车票</a></p><span class="guanbi">×</span>
+					<p class="shoujia"><input type="radio" value="单程"> 单程<input type="radio" value="往返"> 往返</p>
+					<p class="chufa"><input type="text" value="出发"> → <input type="text" value="到达"><input type="text" value="出发"></p>
+					<p><a href="#" class="liji">查找</a> 国内机票满减30元，整点速抢！</p>
+				</div>
+				<div>
+					<p class="chonghuafei"><a href="#">车险</a><a href="#">意外险</a><a href="#">健康险</a><a href="#">旅行险</a></p><span class="guanbi">×</span>
+					<p class="changdu">
+						<select value="请选择城市" >
+							<option>北京</option>
+							<option>上海</option>
+							<option>广州</option>
+							<option>深圳</option>
+							<option>苏州</option>
+							<option>杭州</option>
+							<option>南京</option>
+							<option>珠海</option>
+							<option>中山</option>
+						</select>
+					</p>
+					<p class="changdu">
+						<input type="text" value="保险公司">
+					</p>
+					<p class="baojia"><a href="#" class="liji">立刻报价</a><a href="#" class="xubao">快速续保</a> <a href="#"> 车险活动</a></p>
+				</div>
 			</div><!--xuanxiang结束-->
 		</div><!--biaoge结束-->
+		<p class="ali"><strong>阿里APP</strong><span>更多&gt;</span></p>
+		<div class="tao">
+			<ul>
+				<li>
+					<img src="images/taobao.png" class="png">
+					<div>
+						<img src="images/taobao.jpg" class="jpg">
+						<p>扫一扫淘宝</p>
+					</div>
+				</li>
+				 <li>
+					<img src="images/tianmao.png" class="png">
+					<div>
+						<img src="images/tianmao.jpg" class="jpg">
+						<p>扫一扫天猫</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/juhuasuan.png" class="png">
+					<div>
+						<img src="images/juhuasuan.jpg" class="jpg">
+						<p>扫一扫聚划算</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/zhifubao.png" class="png">
+					<div>
+						<img src="images/zhifubao.jpg" class="jpg">
+						<p>扫一扫支付宝</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/wangwang.png" class="png">
+					<div>
+						<img src="images/wangwang.jpg" class="jpg">
+						<p>扫一扫旺旺</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/dingding.png" class="png">
+					<div>
+						<img src="images/dingding.jpg" class="jpg">
+						<p>扫一扫钉钉</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/tudou.png" class="png">
+					<div>
+						<img src="images/tudou.jpg" class="jpg">
+						<p>扫一扫土豆</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/taopiaopiao.png" class="png">
+					<div>
+						<img src="images/taopiaopiao.jpg" class="jpg">
+						<p>扫一扫淘票票</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/gaode.png" class="png">
+					<div>
+						<img src="images/gaode.jpg" class="jpg">
+						<p>扫一扫高德</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/youku.png" class="png">
+					<div>
+						<img src="images/youku.jpg" class="jpg">
+						<p>扫一扫优酷</p>
+					</div>
+				</li> 
+			</ul>
+		</div><!--tao结束-->
+		<p class="toutiao"><img src="images/toutiao.png"><span>更多&gt;</span></p>
+		<div class="lun">
+			<div class="bo" style="display: block;">
+				<img src="images/hei.png">
+				<div>
+					<h2>黑你没商量！奥运赛场上“曝光”</h2>
+					<p>北京时间8月16日，2016年里约奥运会女子10公里马拉松游泳比赛，法国游泳名将</p>
+				</div>
+			</div>
+			<div class="bo">
+				<img src="images/xinli.png">
+				<div>
+					<h2>心理学实验：给你很多钱，你会不会</h2>
+					<p>（谈性说爱中文网）我们时常听到这样的声音“男人有钱就学坏！”你别道听途说</p>
+				</div>
+			</div>
+			<div class="bo">
+				<img src="images/tian.png">
+				<div>
+					<h2>天了噜！原来10米气步枪靶子</h2>
+					<p>之前有幸采访到10米气步枪奥运冠军陶璐娜老师，聊天中她表示，射击比赛是一项具有</p>
+				</div>
+			</div>
+		</div>
 	</div><!--left_area结束-->
 
 
