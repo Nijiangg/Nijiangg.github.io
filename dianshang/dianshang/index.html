@@ -5,125 +5,7 @@
 	<title>电商网站</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
-	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var Lis=$('.left_bar li')
-			var aLis = $(".pic ul li");
-			var lis = $(".nav ul li");
-			var l = $(".pic ul li").length;
-			var index = 0;
-			//轮播图
-			myShow();
-			function myShow(){
-				aLis.eq(index).find(".img1").animate({'left':'0px'},1000,function(){
-					aLis.eq(index).find(".img2").css("display","block");
-					aLis.eq(index).find(".img2").animate({"left":"0px"},1000);
-					aLis.eq(index).siblings().find(".img1").css("left","-760px");
-					aLis.eq(index).siblings().find(".img2").css("left","-20px");
-					aLis.eq(index).siblings().find(".img2").css("display","none");
-				})
-			};
-			timer1=setInterval(function(){
-				if(index == l){
-					index = 0;
-				}else{
-					index++;
-				};
-				aLis.eq(index).fadeIn(100).siblings().fadeOut(100);
-				lis.eq(index).addClass("select").siblings().removeClass("select");
-				myShow();
-			},2500);
-			
-			//导航菜单
-	 		for( var i = 0;i < Lis.length;i++){
-				Lis[i].onmouseover = function(){
-		 			this.className = "lihover";
-		 		};
-		 		Lis[i].onmouseout = function(){
-		 			this.className = '';
-		 		};
-	 		};
-	 		//选项卡
-	 		var oDiv = $('.xuanxiangka div');
-	 		var aBtn = $('.gonggao a');
-			aBtn.mouseover(function(){
-				oDiv.eq($(this).index()).css('display','block').siblings().css('display','none')
-			})
-		 	//选项卡2
-		 	var ali = $('.xuan_ka');
-		 	var adiv = $('.xuanxiang div');
-		 	var guan = $('.guanbi');
-		 	ali.mouseover(function(){
-				adiv.eq($(this).index()).css('display','block').siblings().css('display','none')
-			});
-			guan.click(function(){
-				adiv.css('display','none');
-			})
-			//二维码
-			var oPng = $('.png');
-
-			var odiv = $('.jpg');
-			oPng.mouseover(function(){
-				$(this).siblings().css('display','block')
-			});
-			oPng.mouseout(function(){
-				$(this).siblings().css('display','none')
-			});
-			//淘宝头条轮播图
-			var oDiv6=document.getElementById('lun');
-				var oUl3=oDiv6.getElementsByTagName('ul')[0];
-				var aLi3=oUl3.getElementsByTagName('li');
-				var timer2=null;
-				var iSpeed=1;
-				oUl3.innerHTML+=oUl3.innerHTML;
-				oUl3.style.height=aLi3.length*aLi3[0].offsetHeight+'px';
-				function fnMove(){
-					if(oUl3.offsetTop<-oUl3.offsetHeight/2){
-						oUl3.style.top=0;
-					}else if(oUl3.offsetTop>0){
-						oUl3.style.top=-oUl3.offsetHeight/2+'px';
-					}
-					oUl3.style.top=oUl3.offsetTop+iSpeed+'px';
-				}; 
-				timer2=setInterval(fnMove,30);
-				oDiv6.onmouseover=function(){
-					clearInterval(timer2);
-				};
-				oDiv6.onmouseout=function(){
-					timer2=setInterval(fnMove,30);
-					iSpeed=-iSpeed;
-				}
-			//竖直导航
-			// $(window).scroll(function () {
-   //              var items = $(".item");
-   //              var menu = $("#menu");
-   //              var top = $(document).scrollTop();
-   //              var currentId = ""; //滚动条现在所在位置的item id
-   //              items.each(function () {
-   //                  var m = $(this);
-   //                  //注意：m.offset().top代表每一个item的顶部位置
-   //                  if (top > m.offset().top - 300) {
-   //                      currentId = "#" + m.attr("id");
-
-   //                  } else {
-   //                      return false;
-   //                  }
-   //              });
-
-   //              var currentLink = menu.find(".current");
-   //              if (currentId && currentLink.attr("href") != currentId) {
-   //                  currentLink.removeClass("current");
-   //                  menu.find("[href=" + currentId + "]").addClass("current");
-   //              };
-               
-   //          });
-		})
-	
-	</script>
-	<style type="text/css">
-		
-	</style>
+	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>	
 </head>
 <body style="overflow:scroll;overflow-x:hidden">
 	<div id="menu">
@@ -1344,6 +1226,121 @@
 		</div><!--footer_wrap结束-->
 	</div><!--footer结束-->
 </body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var Lis=$('.left_bar li')
+			var aLis = $(".pic ul li");
+			var lis = $(".nav ul li");
+			var l = $(".pic ul li").length;
+			var index = 0;
+			//轮播图
+			myShow();
+			function myShow(){
+				aLis.eq(index).find(".img1").animate({'left':'0px'},1000,function(){
+					aLis.eq(index).find(".img2").css("display","block");
+					aLis.eq(index).find(".img2").animate({"left":"0px"},1000);
+					aLis.eq(index).siblings().find(".img1").css("left","-760px");
+					aLis.eq(index).siblings().find(".img2").css("left","-20px");
+					aLis.eq(index).siblings().find(".img2").css("display","none");
+				})
+			};
+			timer1=setInterval(function(){
+				if(index == l){
+					index = 0;
+				}else{
+					index++;
+				};
+				aLis.eq(index).fadeIn(100).siblings().fadeOut(100);
+				lis.eq(index).addClass("select").siblings().removeClass("select");
+				myShow();
+			},2500);
+			
+			//导航菜单
+	 		for( var i = 0;i < Lis.length;i++){
+				Lis[i].onmouseover = function(){
+		 			this.className = "lihover";
+		 		};
+		 		Lis[i].onmouseout = function(){
+		 			this.className = '';
+		 		};
+	 		};
+	 		//选项卡
+	 		var oDiv = $('.xuanxiangka div');
+	 		var aBtn = $('.gonggao a');
+			aBtn.mouseover(function(){
+				oDiv.eq($(this).index()).css('display','block').siblings().css('display','none')
+			})
+		 	//选项卡2
+		 	var ali = $('.xuan_ka');
+		 	var adiv = $('.xuanxiang div');
+		 	var guan = $('.guanbi');
+		 	ali.mouseover(function(){
+				adiv.eq($(this).index()).css('display','block').siblings().css('display','none')
+			});
+			guan.click(function(){
+				adiv.css('display','none');
+			})
+			//二维码
+			var oPng = $('.png');
+
+			var odiv = $('.jpg');
+			oPng.mouseover(function(){
+				$(this).siblings().css('display','block')
+			});
+			oPng.mouseout(function(){
+				$(this).siblings().css('display','none')
+			});
+			//淘宝头条轮播图
+			var oDiv6=document.getElementById('lun');
+				var oUl3=oDiv6.getElementsByTagName('ul')[0];
+				var aLi3=oUl3.getElementsByTagName('li');
+				var timer2=null;
+				var iSpeed=1;
+				oUl3.innerHTML+=oUl3.innerHTML;
+				oUl3.style.height=aLi3.length*aLi3[0].offsetHeight+'px';
+				function fnMove(){
+					if(oUl3.offsetTop<-oUl3.offsetHeight/2){
+						oUl3.style.top=0;
+					}else if(oUl3.offsetTop>0){
+						oUl3.style.top=-oUl3.offsetHeight/2+'px';
+					}
+					oUl3.style.top=oUl3.offsetTop+iSpeed+'px';
+				}; 
+				timer2=setInterval(fnMove,30);
+				oDiv6.onmouseover=function(){
+					clearInterval(timer2);
+				};
+				oDiv6.onmouseout=function(){
+					timer2=setInterval(fnMove,30);
+					iSpeed=-iSpeed;
+				}
+			//竖直导航
+			// $(window).scroll(function () {
+   //              var items = $(".item");
+   //              var menu = $("#menu");
+   //              var top = $(document).scrollTop();
+   //              var currentId = ""; //滚动条现在所在位置的item id
+   //              items.each(function () {
+   //                  var m = $(this);
+   //                  //注意：m.offset().top代表每一个item的顶部位置
+   //                  if (top > m.offset().top - 300) {
+   //                      currentId = "#" + m.attr("id");
+
+   //                  } else {
+   //                      return false;
+   //                  }
+   //              });
+
+   //              var currentLink = menu.find(".current");
+   //              if (currentId && currentLink.attr("href") != currentId) {
+   //                  currentLink.removeClass("current");
+   //                  menu.find("[href=" + currentId + "]").addClass("current");
+   //              };
+               
+   //          });
+		})
+	
+	</script>
 </html>
 
 
