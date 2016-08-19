@@ -24,7 +24,7 @@
 					aLis.eq(index).siblings().find(".img2").css("display","none");
 				})
 			};
-			setInterval(function(){
+			timer1=setInterval(function(){
 				if(index == l){
 					index = 0;
 				}else{
@@ -71,22 +71,53 @@
 				$(this).siblings().css('display','none')
 			});
 			//淘宝头条轮播图
-			var bo = $('.bo');
-			function fnMove(){
-				if(index == 2){
-					index = 0;
-				}else{
-					index++;
+			var oDiv6=document.getElementById('lun');
+				var oUl3=oDiv6.getElementsByTagName('ul')[0];
+				var aLi3=oUl3.getElementsByTagName('li');
+				var timer2=null;
+				var iSpeed=1;
+				oUl3.innerHTML+=oUl3.innerHTML;
+				oUl3.style.height=aLi3.length*aLi3[0].offsetHeight+'px';
+				function fnMove(){
+					if(oUl3.offsetTop<-oUl3.offsetHeight/2){
+						oUl3.style.top=0;
+					}else if(oUl3.offsetTop>0){
+						oUl3.style.top=-oUl3.offsetHeight/2+'px';
+					}
+					oUl3.style.top=oUl3.offsetTop+iSpeed+'px';
+				}; 
+				timer2=setInterval(fnMove,30);
+				oDiv6.onmouseover=function(){
+					clearInterval(timer2);
+				};
+				oDiv6.onmouseout=function(){
+					timer2=setInterval(fnMove,30);
+					iSpeed=-iSpeed;
 				}
-				bo.eq(index).css('display','block').siblings().css('display','none')
-			};
-			timer=setInterval(fnMove,1000);
-			bo.mouseover(function(){
-				clearInterval(timer)
-			});
-			bo.mouseout(function(){
-				timer=setInterval(fnMove,1000);
-			})
+			//竖直导航
+			// $(window).scroll(function () {
+   //              var items = $(".item");
+   //              var menu = $("#menu");
+   //              var top = $(document).scrollTop();
+   //              var currentId = ""; //滚动条现在所在位置的item id
+   //              items.each(function () {
+   //                  var m = $(this);
+   //                  //注意：m.offset().top代表每一个item的顶部位置
+   //                  if (top > m.offset().top - 300) {
+   //                      currentId = "#" + m.attr("id");
+
+   //                  } else {
+   //                      return false;
+   //                  }
+   //              });
+
+   //              var currentLink = menu.find(".current");
+   //              if (currentId && currentLink.attr("href") != currentId) {
+   //                  currentLink.removeClass("current");
+   //                  menu.find("[href=" + currentId + "]").addClass("current");
+   //              };
+               
+   //          });
 		})
 	
 	</script>
@@ -95,6 +126,15 @@
 	</style>
 </head>
 <body style="overflow:scroll;overflow-x:hidden">
+	<div id="menu">
+	    <ul>
+	        <li><a href="#item1" class="current">1F 家电</a></li>
+	        <li><a href="#item2">2F 酒水</a></li>
+	        <li><a href="#item3">3F 宠物</a></li>
+	        <li><a href="#item4">4F 饮料</a></li>
+	        <li><a href="#item5">5F 服饰</a></li>
+	    </ul>
+	</div><!-- menu结束 -->
 	<div class="header">
 		<div class="container1">
 			<div class="title">
@@ -635,7 +675,7 @@
 	</div>
 		
 	</div><!--wrap结束-->
-	<div class="wrap">
+	<div class="wrap item"  id="item1">
 		<div class="container_left">
 			<img class="image1" src="images/center1.png">
 			<img class="image2" src="images/center2.png">
@@ -703,7 +743,7 @@
 			<h1>食品酒水</h1>
 			<div class="more"><a href="#">更多&gt;&gt;</a></div>
 	</div><!--shipin结束-->
-	<div class="wrap">
+	<div class="wrap item"  id="item2">
 		<div class="container_left">
 			<img class="image3" src="images/shipin.png">
 			<div class="baoguo">
@@ -760,12 +800,12 @@
 			<div class="dibu"></div><!--dibu结束-->
 		</div><!--container_right结束-->
 	</div><!--wrap结束-->
-		<div class="shipin">
-			<img src="images/jiayong.png">
-			<h1>花鸟鱼虫</h1>
-			<div class="more"><a href="#">更多&gt;&gt;</a></div>
+	<div class="shipin">
+		<img src="images/jiayong.png">
+		<h1>花鸟鱼虫</h1>
+		<div class="more"><a href="#">更多&gt;&gt;</a></div>
 	</div><!--shipin结束-->
-	<div class="wrap">
+	<div class="wrap item"  id="item3">
 		<div class="container_left">
 			<img class="image3" src="images/ganhuo.png">
 			<div class="baoguo">
@@ -816,6 +856,132 @@
 					<li>
 						<img src="images/hua.png">
 						<p><a href="#">红玫瑰 产自新西兰 99朵</a></br><span>￥1314.00</span></p>
+					</li>
+				</ul>
+			</div><!--zhongbu结束-->
+			<div class="dibu"></div><!--dibu结束-->
+		</div><!--container_right结束-->
+
+	</div><!--wrap结束-->
+	<div class="shipin">
+		<img src="images/jiayong.png">
+		<h1>咖啡茶饮</h1>
+		<div class="more"><a href="#">更多&gt;&gt;</a></div>
+	</div><!--shipin结束-->
+	<div class="wrap item"  id="item4">
+		<div class="container_left">
+			<img class="image3" src="images/cha.png">
+			<div class="baoguo">
+				<h1>满99减5</h1>
+				<h3>买就送5重好礼</h3>
+				<input type="button" name="btn" value="了解详情">
+			</div>
+		</div><!--container_left结束-->
+		<div class="container_right">
+			<div class="shangbu">
+				<ul>
+					<li>
+						<img src="images/kafei.png">
+						<h2><a href="#">买就送5重好礼</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/kafei.png">
+						<h2><a href="#">买就送5重好礼</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/kafei.png">
+						<h2><a href="#">买就送5重好礼</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/kafei.png">
+						<h2><a href="#">买就送5重好礼</a></h2>
+						<h3>199元</h3>
+					</li>
+				</ul>
+			</div><!--shangbu结束-->
+			<div class="zhongbu">
+				<ul>
+					<li>
+						<img src="images/shui.png">
+						<p><a href="#">茉莉花茶 清热降火 10包</a></br><span>￥88.00</span></p>
+					</li>
+					<li>
+						<img src="images/shui.png">
+						<p><a href="#">茉莉花茶 清热降火 10包</a></br><span>￥88.00</span></p>
+					</li>
+					<li>
+						<img src="images/shui.png">
+						<p><a href="#">茉莉花茶 清热降火 10包</a></br><span>￥88.00</span></p>
+					</li>
+					<li>
+						<img src="images/shui.png">
+						<p><a href="#">茉莉花茶 清热降火 10包</a></br><span>￥88.00</span></p>
+					</li>
+				</ul>
+			</div><!--zhongbu结束-->
+			<div class="dibu"></div><!--dibu结束-->
+		</div><!--container_right结束-->
+
+	</div><!--wrap结束-->
+		<div class="shipin">
+		<img src="images/jiayong.png">
+		<h1>服装首饰</h1>
+		<div class="more"><a href="#">更多&gt;&gt;</a></div>
+	</div><!--shipin结束-->
+	<div class="wrap item"  id="item5">
+		<div class="container_left">
+			<img class="image3" src="images/xie.png">
+			<div class="baoguo">
+				<h1>全场8折</h1>
+				<h3>折上折送到手软</h3>
+				<input type="button" name="btn" value="了解详情">
+			</div>
+		</div><!--container_left结束-->
+		<div class="container_right">
+			<div class="shangbu">
+				<ul>
+					<li>
+						<img src="images/xiezi.png">
+						<h2><a href="#">折上折送到手软</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/xiezi.png">
+						<h2><a href="#">折上折送到手软</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/xiezi.png">
+						<h2><a href="#">折上折送到手软</a></h2>
+						<h3>199元</h3>
+					</li>
+					<li>
+						<img src="images/xiezi.png">
+						<h2><a href="#">折上折送到手软</a></h2>
+						<h3>199元</h3>
+					</li>
+				</ul>
+			</div><!--shangbu结束-->
+			<div class="zhongbu">
+				<ul>
+					<li>
+						<img src="images/ren.png">
+						<p><a href="#">时尚凉鞋 夏日精品 1双</a></br><span>￥588.00</span></p>
+					</li>
+					<li>
+						<img src="images/ren.png">
+						<p><a href="#">时尚凉鞋 夏日精品 1双</a></br><span>￥588.00</span></p>
+					</li>
+					<li>
+						<img src="images/ren.png">
+						<p><a href="#">时尚凉鞋 夏日精品 1双</a></br><span>￥588.00</span></p>
+					</li>
+					<li>
+						<img src="images/ren.png">
+						<p><a href="#">时尚凉鞋 夏日精品 1双</a></br><span>￥588.00</span></p>
 					</li>
 				</ul>
 			</div><!--zhongbu结束-->
@@ -1014,29 +1180,145 @@
 			</ul>
 		</div><!--tao结束-->
 		<p class="toutiao"><img src="images/toutiao.png"><span>更多&gt;</span></p>
-		<div class="lun">
-			<div class="bo" style="display: block;">
-				<img src="images/hei.png">
-				<div>
-					<h2>黑你没商量！奥运赛场上“曝光”</h2>
-					<p>北京时间8月16日，2016年里约奥运会女子10公里马拉松游泳比赛，法国游泳名将</p>
-				</div>
-			</div>
-			<div class="bo">
-				<img src="images/xinli.png">
-				<div>
-					<h2>心理学实验：给你很多钱，你会不会</h2>
-					<p>（谈性说爱中文网）我们时常听到这样的声音“男人有钱就学坏！”你别道听途说</p>
-				</div>
-			</div>
-			<div class="bo">
-				<img src="images/tian.png">
-				<div>
-					<h2>天了噜！原来10米气步枪靶子</h2>
-					<p>之前有幸采访到10米气步枪奥运冠军陶璐娜老师，聊天中她表示，射击比赛是一项具有</p>
-				</div>
-			</div>
+		<div class="lun" id="lun">
+			<ul>
+				<li class="bo" style="display: block;">
+					<img src="images/hei.png">
+					<div>
+						<h2>黑你没商量！奥运赛场上“曝光”</h2>
+						<p>北京时间8月16日，2016年里约奥运会女子10公里马拉松游泳比赛，法国游泳名将</p>
+					</div>
+				</li>
+				<li class="bo">
+					<img src="images/xinli.png">
+					<div>
+						<h2>心理学实验：给你很多钱，你会不会</h2>
+						<p>（谈性说爱中文网）我们时常听到这样的声音“男人有钱就学坏！”你别道听途说</p>
+					</div>
+				</li>
+				<li class="bo">
+					<img src="images/tian.png">
+					<div>
+						<h2>天了噜！原来10米气步枪靶子这么小</h2>
+						<p>之前有幸采访到10米气步枪奥运冠军陶璐娜老师，聊天中她表示，射击比赛是一项具有</p>
+					</div>
+				</li>
+			</ul>
+		</div><!--lun结束-->
+		<div class="haohuo">
+			<img src="images/haohuo.png">
+		</div><!--haohuo结束-->
+		<div class="youhaohuo">
+			<ul>
+				<li>
+					<img src="images/huacha.png">
+					<div>
+						<h2><a href="#">十瓶花茶组合大礼包</a></h2>
+						<p>选自不同地域特色的花草茶，按照科学理论搭配组合，10种</p>
+						<span>947 人说好</span>
+					</div>
+				</li>
+				<li>
+					<img src="images/biliang.png">
+					<div>
+						<h2><a href="#">日本OMNI鼻梁矫正器</a></h2>
+						<p>将美鼻矫正器套在鼻子里面，从内侧将外侧鼻软骨、鼻翼软</p>
+						<p><span>0 人说好</span></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/qinghai.png">
+					<div>
+						<h2><a href="#">呀啦嗦青海格尔木</a></h2>
+						<p>黑枸杞中富含的花青素具有很强的生物活性，容易被人体吸</p>
+						<p><span>54 人说好</span></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/xiushen.png">
+					<div>
+						<h2><a href="#">修身连体裤</a></h2>
+						<p>实用圆领款式，简单大方，突显你的时尚品味。修身版型设</p>
+						<p><span>87 人说好</span></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/xili.png">
+					<div>
+						<h2><a href="#">喜力胶囊式生啤机</a></h2>
+						<p>喜力 胶囊式生啤机，意大利进口，简约时尚的设计，性感优</p>
+						<p><span>99 人说好</span></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/yanzi.png">
+					<div>
+						<h2><a href="#">盐渍樱花</a></h2>
+						<p>盐渍樱花，粉粉的颜色，看着整个人心情就很好，只需一两</p>
+						<p><span>7 人说好</span></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/langman.png">
+					<div>
+						<h2><a href="#">蕾丝边梭织睡衣</a></h2>
+						<p>全棉面料穿起来非常舒服，薄款适合夏季，浪漫的粉红色散</p>
+						<p><span>66 人说好</span></p>
+					</div>
+				</li>
+			</ul>
+		</div><!--youhaohuo结束-->
+		<div>
+			<p class=" kanguo">足迹，我最近看过的</p>
+			<div class="zuji">
+				<ul>
+					<li>
+						<a href="#"><img src="images/1 (1).png"></a>
+						<p>16小时前</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/1 (2).png"></a>
+						<p>16小时前</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/1 (3).png"></a>
+						<p>16小时前</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/1 (4).png"></a>
+						<p>16小时前</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/1 (5).png"></a>
+						<p>16小时前</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/1 (6).png"></a>
+						<p>16小时前</p>
+					</li>
+				</ul>
+			</div><!--zuji结束-->
 		</div>
+		<div class="haodian">
+			<ul>
+				<li>
+					<h2><a href="#">今日推荐—1天3波</a></h2>
+					<p>一个月被关注了668次，一定有好东西！</p>
+					<img src="images/youdian (4).png">
+				</li>
+				<li>
+					<h2><a href="#">包包控</a></h2>
+					<p>一个月被关注了32554次，一定有好东西！</p>
+					<img src="images/youdian (2).png">
+				</li>
+				<li>
+					<h2><a href="#">一间老店—N个故事</a></h2>
+					<p>一个月被关注了1435次，一定有好东西！</p>
+					<img src="images/youdian (3).png">
+				</li>
+				
+			</ul>
+		</div><!--haodian结束-->
 	</div><!--left_area结束-->
 
 
